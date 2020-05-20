@@ -1,14 +1,21 @@
 Package: StartFresh
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Remove all the existing R packages
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Author: Mohamed El Fodil Ihaddaden
+Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
+Description: 
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
     fs,
-    purrr
+    purrr,
+    dplyr,
+    magrittr,
+    utils,
+    glue
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat
