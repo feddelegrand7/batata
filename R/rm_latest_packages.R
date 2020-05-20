@@ -37,11 +37,16 @@ rm_latest_packages <- function(n){
     data <- fs::file_info(paths)
 
 
-    last_packages <- data %>% dplyr::arrange(dplyr::desc(modification_time)) %>% utils::head(., n)
+    last_packages <- data %>%
+      dplyr::arrange(dplyr::desc(modification_time)) %>%
+      utils::head(., n)
 
-    last_packages$path
+    names <- fs::path_split(last_packages$path) %>% sapply(., utils::tail, 1)
 
-    fs::dir_delete(last_packages$path)
+    utils::remove.packages(names)
+
+    message(glue::glue("{names} removed ", .sep = "\n"))
+
 
   } else {
 

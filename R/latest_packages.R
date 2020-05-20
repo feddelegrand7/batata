@@ -33,7 +33,7 @@ latest_packages <- function(n){
 
   names <- fs::path_split(latest$path) %>% sapply(., utils::tail, 1)
 
-  as.data.frame(cbind(packages = names, installation_time = as.character(latest$birth_time)))
+  as.data.frame(cbind(packages = names, modification_time = as.character(latest$modification_time)))
 
 
 
