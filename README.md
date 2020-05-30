@@ -30,7 +30,7 @@ install.packages("remotes")
 remotes::install_github("feddelegrand7/batata")
 ```
 
-## \# Examples
+## \# Functions
 
 ### `fresh_start()`
 
@@ -55,6 +55,8 @@ corresponding packages.
 before you’re running that function and in parallel,
 `rm_yesterday_packages()` removes the corresponding packages.
 
+-----
+
 ### `since_packages()` and `rm_since_packages()`
 
 `since_packages()` displays the packages that you’ve installed according
@@ -66,6 +68,8 @@ to a specific date. It has two argument:
 
 `rm_since_package()` works similarly except that it removes the packages
 instead of displaying them.
+
+-----
 
 ### `latest_packages()` and `rm_latest_packages()`
 
@@ -106,4 +110,6 @@ latest_packages(n = 1)
 Please note that the batata project is released with a [Contributor Code
 of
 Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
-By contributing to this project, you agree to abide by its terms.
+By contributing to this project, you agree to abide by its terms. If you
+encounter any bug or if you want an improvement, please feel free to
+open an Issue.
