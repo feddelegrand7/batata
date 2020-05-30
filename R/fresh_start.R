@@ -42,7 +42,7 @@ fresh_start <- function(){
 
     names <- fs::path_split(paths) %>% sapply(., utils::tail, 1)
 
-    remove.packages(names)
+    utils::remove.packages(names)
 
   } else {
 
