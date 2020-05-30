@@ -1,6 +1,6 @@
-Package: StartFresh
+Package: batata
 Type: Package
-Title: Remove all the existing R packages
+Title: Managing pacakages removal
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
@@ -19,3 +19,5 @@ Imports:
 RoxygenNote: 7.1.0
 Suggests: 
     testthat
+URL: https://github.com/feddelegrand7/batata
+BugReports: https://github.com/feddelegrand7/batata/issues
