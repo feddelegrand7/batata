@@ -5,7 +5,7 @@
 
 <!-- badges: end -->
 
-# batata
+# batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
 
 The goal of batata is to help R users manage R packages removals. For
 example, imagine you’re attending tomorrow an R meet up in which you’ll
@@ -79,24 +79,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>      packages   modification_time
-#> 1    spelling 2020-05-30 16:52:28
-#> 2      batata 2020-05-30 16:47:55
-#> 3  KernSmooth 2020-05-30 16:45:05
-#> 4        glue 2020-05-20 06:28:32
-#> 5      ralger 2020-05-20 06:17:43
-#> 6   patchwork 2020-05-20 06:17:12
-#> 7  assertthat 2020-05-18 20:46:39
-#> 8     farrell 2020-05-17 02:31:44
-#> 9  shinyalert 2020-05-16 03:12:52
-#> 10      golem 2020-05-16 02:49:06
+#>          packages   modification_time
+#> 1          batata 2020-05-30 17:23:06
+#> 2  languageserver 2020-05-28 13:34:01
+#> 3         R.cache 2020-05-28 13:33:38
+#> 4       cyclocomp 2020-05-28 13:33:38
+#> 5         R.utils 2020-05-28 13:33:37
+#> 6            R.oo 2020-05-28 13:33:37
+#> 7     R.methodsS3 2020-05-28 13:33:37
+#> 8    xmlparsedata 2020-05-28 13:33:37
+#> 9           lintr 2020-05-28 13:33:36
+#> 10    collections 2020-05-28 13:33:36
 
 
 # The last package installed 
 
 latest_packages(n = 1)
 #>   packages   modification_time
-#> 1 spelling 2020-05-30 16:52:28
+#> 1   batata 2020-05-30 17:23:06
 ```
 
 -----
