@@ -1,6 +1,6 @@
 Package: batata
 Type: Package
-Title: Managing pacakages removal
+Title: Managing packages removal
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
