@@ -33,16 +33,19 @@ remotes::install_github("feddelegrand7/batata")
 ```
 
 # Examples
+-------------------------------
 
 ### `fresh_start()`
 
 The `fresh_start()` function removes all your installed R packages. Particularly useful when moving from an R version to another. This function is quite dangerous, so you'll be prompted twice to make sure that you're absolutely certain to run it. 
 
+----------------------------------
 
 ### `today_packages()` and `rm_today_packages()`
 
 `today_packages()` displays all the packages installed the day you're running that function and in parallel, `rm_today_packages()` removes the corresponding packages.  
 
+----------------------------------
 
 ### `yesterday_packages()` and `rm_yesterday_packages()` 
 
@@ -57,7 +60,6 @@ The `fresh_start()` function removes all your installed R packages. Particularly
 + _position_: whether to display the installed packages __at__ that date, __before__ that date or __after__ that date. 
 
 `rm_since_package()` works similarly except that it removes the packages instead of displaying them. 
-
 
 
 ### `latest_packages()` and `rm_latest_packages()` 
@@ -82,7 +84,7 @@ latest_packages(n = 1)
 
 
 ```
-
+----------------------------------
 ## Code of Conduct
 
 Please note that the batata project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

@@ -30,7 +30,7 @@ install.packages("remotes")
 remotes::install_github("feddelegrand7/batata")
 ```
 
-# Examples
+## \# Examples
 
 ### `fresh_start()`
 
@@ -39,11 +39,15 @@ Particularly useful when moving from an R version to another. This
 function is quite dangerous, so you’ll be prompted twice to make sure
 that you’re absolutely certain to run it.
 
+-----
+
 ### `today_packages()` and `rm_today_packages()`
 
 `today_packages()` displays all the packages installed the day you’re
 running that function and in parallel, `rm_today_packages()` removes the
 corresponding packages.
+
+-----
 
 ### `yesterday_packages()` and `rm_yesterday_packages()`
 
@@ -94,6 +98,8 @@ latest_packages(n = 1)
 #>   packages   modification_time
 #> 1 spelling 2020-05-30 16:52:28
 ```
+
+-----
 
 ## Code of Conduct
 
