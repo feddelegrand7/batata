@@ -3,7 +3,6 @@
 export("%>%")
 export(fresh_start)
 export(latest_packages)
-export(rm_last_package)
 export(rm_latest_packages)
 export(rm_since_packages)
 export(rm_today_packages)

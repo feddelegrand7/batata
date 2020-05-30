@@ -1,4 +1,4 @@
-#' Remove a specific number of the latest installed R package
+#' Remove the n latest installed R packages
 #'
 #' @param n the last number of installed packages to remove
 #' @return called for the side effect of removing the n latest installed packages

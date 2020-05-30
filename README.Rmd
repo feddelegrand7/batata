@@ -13,42 +13,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-# StartFresh
-
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of StartFresh is to ...
+# batata
+
+The goal of batata is to help R users manage R packages removals. For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package comes with a bunch of dependency which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security).
 
 ## Installation
 
-You can install the released version of StartFresh from [CRAN](https://CRAN.R-project.org) with:
+You can install the development version of batata from Github
 
-``` r
-install.packages("StartFresh")
+```{r, eval=FALSE}
+install.packages("remotes")
+
+remotes::install_github("feddelegrand7/batata")
+
+
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(StartFresh)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!

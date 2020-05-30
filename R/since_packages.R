@@ -9,7 +9,7 @@
 #' @examples
 #' \dontrun{
 #' # Displaying the packages installed today
-#' today_packages()
+#' since_packages(date = Sys.Date(), position = "at")
 #' }
 
 since_packages <- function(date, position){

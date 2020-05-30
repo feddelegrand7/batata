@@ -2,7 +2,7 @@
 % Please edit documentation in R/fresh_start.R
 \name{fresh_start}
 \alias{fresh_start}
-\title{Remove all R packages}
+\title{Remove all the installed R packages}
 \usage{
 fresh_start()
 }
@@ -10,7 +10,7 @@ fresh_start()
 called for the side effect of removing all installed packages
 }
 \description{
-Remove all R packages
+Remove all the installed R packages
 }
 \examples{
 

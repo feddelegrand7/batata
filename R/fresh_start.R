@@ -1,4 +1,4 @@
-#' Remove all R packages
+#' Remove all the installed R packages
 #'
 #' @return called for the side effect of removing all installed packages
 #' @export

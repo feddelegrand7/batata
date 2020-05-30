@@ -2,7 +2,7 @@
 % Please edit documentation in R/rm_latest_packages.R
 \name{rm_latest_packages}
 \alias{rm_latest_packages}
-\title{Remove a specific number of the latest installed R package}
+\title{Remove the n latest installed R packages}
 \usage{
 rm_latest_packages(n)
 }
@@ -13,7 +13,7 @@ rm_latest_packages(n)
 called for the side effect of removing the n latest installed packages
 }
 \description{
-Remove a specific number of the latest installed R package
+Remove the n latest installed R packages
 }
 \examples{
 

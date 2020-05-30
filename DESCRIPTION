@@ -17,7 +17,5 @@ Imports:
     utils,
     glue
 RoxygenNote: 7.1.0
-Suggests: 
-    testthat
 URL: https://github.com/feddelegrand7/batata
 BugReports: https://github.com/feddelegrand7/batata/issues
