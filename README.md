@@ -42,7 +42,7 @@ that you’re absolutely certain to run it.
 ### `today_packages()` and `rm_today_packages()`
 
 `today_packages()` displays all the packages installed the day you’re
-running that function and in parallel, `rm_today_packages()` the
+running that function and in parallel, `rm_today_packages()` removes the
 corresponding packages.
 
 ### `yesterday_packages()` and `rm_yesterday_packages()`
@@ -75,24 +75,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages   modification_time
-#> 1       batata 2020-05-30 16:13:18
-#> 2         glue 2020-05-20 06:28:32
-#> 3       ralger 2020-05-20 06:17:43
-#> 4    patchwork 2020-05-20 06:17:12
-#> 5   assertthat 2020-05-18 20:46:39
-#> 6      farrell 2020-05-17 02:31:44
-#> 7   shinyalert 2020-05-16 03:12:52
-#> 8        golem 2020-05-16 02:49:06
-#> 9  dockerfiler 2020-05-16 02:49:06
-#> 10      config 2020-05-16 02:49:06
+#>      packages   modification_time
+#> 1    spelling 2020-05-30 16:52:28
+#> 2      batata 2020-05-30 16:47:55
+#> 3  KernSmooth 2020-05-30 16:45:05
+#> 4        glue 2020-05-20 06:28:32
+#> 5      ralger 2020-05-20 06:17:43
+#> 6   patchwork 2020-05-20 06:17:12
+#> 7  assertthat 2020-05-18 20:46:39
+#> 8     farrell 2020-05-17 02:31:44
+#> 9  shinyalert 2020-05-16 03:12:52
+#> 10      golem 2020-05-16 02:49:06
 
 
 # The last package installed 
 
 latest_packages(n = 1)
 #>   packages   modification_time
-#> 1   batata 2020-05-30 16:13:18
+#> 1 spelling 2020-05-30 16:52:28
 ```
 
 ## Code of Conduct

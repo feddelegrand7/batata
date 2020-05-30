@@ -41,7 +41,7 @@ The `fresh_start()` function removes all your installed R packages. Particularly
 
 ### `today_packages()` and `rm_today_packages()`
 
-`today_packages()` displays all the packages installed the day you're running that function and in parallel, `rm_today_packages()` the corresponding packages.  
+`today_packages()` displays all the packages installed the day you're running that function and in parallel, `rm_today_packages()` removes the corresponding packages.  
 
 
 ### `yesterday_packages()` and `rm_yesterday_packages()` 
