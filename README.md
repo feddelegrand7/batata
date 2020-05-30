@@ -62,3 +62,42 @@ to a specific date. It has two argument:
 
 `rm_since_package()` works similarly except that it removes the packages
 instead of displaying them.
+
+### `latest_packages()` and `rm_latest_packages()`
+
+Suppose you want to check out the last 10 packages that you’ve
+installed, or, maybe you want to display the last installed package:
+
+``` r
+
+library(batata)
+
+# The 10 last installed packages
+
+latest_packages(n = 10)
+#>       packages   modification_time
+#> 1       batata 2020-05-30 16:13:18
+#> 2         glue 2020-05-20 06:28:32
+#> 3       ralger 2020-05-20 06:17:43
+#> 4    patchwork 2020-05-20 06:17:12
+#> 5   assertthat 2020-05-18 20:46:39
+#> 6      farrell 2020-05-17 02:31:44
+#> 7   shinyalert 2020-05-16 03:12:52
+#> 8        golem 2020-05-16 02:49:06
+#> 9  dockerfiler 2020-05-16 02:49:06
+#> 10      config 2020-05-16 02:49:06
+
+
+# The last package installed 
+
+latest_packages(n = 1)
+#>   packages   modification_time
+#> 1   batata 2020-05-30 16:13:18
+```
+
+## Code of Conduct
+
+Please note that the batata project is released with a [Contributor Code
+of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.

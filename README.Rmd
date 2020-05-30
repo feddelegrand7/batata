@@ -60,7 +60,32 @@ The `fresh_start()` function removes all your installed R packages. Particularly
 
 
 
+### `latest_packages()` and `rm_latest_packages()` 
 
+
+Suppose you want to check out the last 10 packages that you've installed, or, maybe you want to display the last installed package: 
+
+
+```{r}
+
+library(batata)
+
+# The 10 last installed packages
+
+latest_packages(n = 10)
+
+
+# The last package installed 
+
+latest_packages(n = 1)
+
+
+
+```
+
+## Code of Conduct
+
+Please note that the batata project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 
 
