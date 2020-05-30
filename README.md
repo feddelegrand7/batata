@@ -32,7 +32,7 @@ remotes::install_github("feddelegrand7/batata")
 
 # Examples
 
-#### fresh\_start()
+### `fresh_start()`
 
 The `fresh_start()` function removes all your installed R packages.
 Particularly useful when moving from an R version to another. This
