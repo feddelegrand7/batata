@@ -7,6 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -17,6 +18,10 @@ knitr::opts_chunk$set(
 )
 ```
 
+<!-- badges: start -->
+<!-- badges: end -->
+
+# batata 
 
 The goal of batata is to help R users manage R packages removals. For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package comes with a bunch of dependency which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision. 
 
@@ -32,22 +37,28 @@ remotes::install_github("feddelegrand7/batata")
 
 ```
 
-# Examples
+# Functions
+-------------------------------
 
-#### fresh_start()
+### `fresh_start()`
 
 The `fresh_start()` function removes all your installed R packages. Particularly useful when moving from an R version to another. This function is quite dangerous, so you'll be prompted twice to make sure that you're absolutely certain to run it. 
 
+----------------------------------
 
 ### `today_packages()` and `rm_today_packages()`
 
-`today_packages()` displays all the packages installed the day you're running that function and in parallel, `rm_today_packages()` the corresponding packages.  
+`today_packages()` displays all the packages installed the day you're running that function and in parallel, `rm_today_packages()` removes the corresponding packages.  
 
+----------------------------------
 
 ### `yesterday_packages()` and `rm_yesterday_packages()` 
 
 
 `yesterday_packages()` displays all the packages installed the day before you're running that function and in parallel, `rm_yesterday_packages()` removes the corresponding packages.  
+
+
+-------------------------------------
 
 ### `since_packages()` and `rm_since_packages()`
 
@@ -58,6 +69,8 @@ The `fresh_start()` function removes all your installed R packages. Particularly
 
 `rm_since_package()` works similarly except that it removes the packages instead of displaying them. 
 
+
+------------------------------------------
 
 
 ### `latest_packages()` and `rm_latest_packages()` 
@@ -82,10 +95,22 @@ latest_packages(n = 1)
 
 
 ```
-
+----------------------------------
 ## Code of Conduct
 
-Please note that the batata project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the batata project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms. If you encounter any bug or if you want an improvement, please feel free to open an Issue. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,11 +1,11 @@
 Package: batata
 Type: Package
-Title: Managing packages removal
+Title: Managing Packages Removal
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
 Description: 
-    Allows the user to manage easily R packages removal. It offers many functions to display installed packages according 
+    Allows the user to manage easily R packages removal. It offers many functions to display installed packages according to
     specific dates and removes them if needed. The user is always prompted when running the removal functions in order to confirm
     the required action. It offers also a function that removes all the installed packages in case one wants to switch from one R version 
     to another and start fresh. 

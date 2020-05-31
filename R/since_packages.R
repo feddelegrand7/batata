@@ -25,8 +25,6 @@ since_packages <- function(date, position){
 
   data <- fs::file_info(paths)
 
-
-
   data$birth_time <- as.Date(data$birth_time)
 
   today_packages <- data %>% dplyr::filter(birth_time == Sys.Date())

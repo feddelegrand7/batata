@@ -84,7 +84,7 @@ library(batata)
 
 latest_packages(n = 10)
 #>          packages   modification_time
-#> 1          batata 2020-05-30 17:23:06
+#> 1          batata 2020-05-31 09:40:01
 #> 2  languageserver 2020-05-28 13:34:01
 #> 3         R.cache 2020-05-28 13:33:38
 #> 4       cyclocomp 2020-05-28 13:33:38
@@ -100,7 +100,7 @@ latest_packages(n = 10)
 
 latest_packages(n = 1)
 #>   packages   modification_time
-#> 1   batata 2020-05-30 17:23:06
+#> 1   batata 2020-05-31 09:40:01
 ```
 
 -----
