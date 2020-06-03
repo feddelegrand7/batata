@@ -22,12 +22,6 @@ today_packages <- function(){
     data <- fs::file_info(paths)
 
 
-
-    data$birth_time <- as.Date(data$birth_time)
-
-    today_packages <- data %>% dplyr::filter(birth_time == Sys.Date())
-
-
     data$modification_time <- as.Date(data$modification_time)
 
     today_packages <- data %>% dplyr::filter(modification_time == Sys.Date())
