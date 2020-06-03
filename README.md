@@ -20,11 +20,13 @@ confirm your decision (which adds a certain degree of security), you can
 also run `today_packages()` to check all the today installed packages
 before making a decision.
 
+# Important
 
-## Important 
+<center>
 
+### You might need to install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) in order to use the package
 
-
+</center>
 
 ## Installation
 
@@ -89,24 +91,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>          packages   modification_time
-#> 1          batata 2020-05-31 09:40:01
-#> 2  languageserver 2020-05-28 13:34:01
-#> 3         R.cache 2020-05-28 13:33:38
-#> 4       cyclocomp 2020-05-28 13:33:38
-#> 5         R.utils 2020-05-28 13:33:37
-#> 6            R.oo 2020-05-28 13:33:37
-#> 7     R.methodsS3 2020-05-28 13:33:37
-#> 8    xmlparsedata 2020-05-28 13:33:37
-#> 9           lintr 2020-05-28 13:33:36
-#> 10    collections 2020-05-28 13:33:36
+#>        packages   modification_time
+#> 1        batata 2020-06-03 20:00:55
+#> 2         dplyr 2020-06-03 19:48:27
+#> 3        ralger 2020-06-03 16:32:44
+#> 4          deaR 2020-06-03 15:25:29
+#> 5       writexl 2020-06-03 15:25:28
+#> 6       farrell 2020-06-03 11:18:20
+#> 7        reactR 2020-06-01 08:45:02
+#> 8    shinyalert 2020-05-31 21:51:12
+#> 9   shinythemes 2020-05-31 16:13:10
+#> 10 shinyobjects 2020-05-31 13:36:26
 
 
 # The last package installed 
 
 latest_packages(n = 1)
 #>   packages   modification_time
-#> 1   batata 2020-05-31 09:40:01
+#> 1   batata 2020-06-03 20:00:55
 ```
 
 -----
