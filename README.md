@@ -20,14 +20,6 @@ confirm your decision (which adds a certain degree of security), you can
 also run `today_packages()` to check all the today installed packages
 before making a decision.
 
-# Important
-
-<center>
-
-### You might need to install [Rtools](https://cran.r-project.org/bin/windows/Rtools/) in order to use the package
-
-</center>
-
 ## Installation
 
 You can install the development version of batata from Github
@@ -91,24 +83,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>        packages   modification_time
-#> 1      ggmosaic 2020-06-04 14:24:02
-#> 2  productplots 2020-06-04 14:24:02
-#> 3       farrell 2020-06-04 13:11:36
-#> 4        batata 2020-06-03 20:00:55
-#> 5         dplyr 2020-06-03 19:48:27
-#> 6        ralger 2020-06-03 16:32:44
-#> 7          deaR 2020-06-03 15:25:29
-#> 8       writexl 2020-06-03 15:25:28
-#> 9        reactR 2020-06-01 08:45:02
-#> 10   shinyalert 2020-05-31 21:51:12
+#>       packages       modification_time    
+#>  [1,] "batata"       "2020-06-04 22:21:35"
+#>  [2,] "ggmosaic"     "2020-06-04 16:33:51"
+#>  [3,] "productplots" "2020-06-04 16:33:51"
+#>  [4,] "assertthat"   "2020-06-04 16:10:07"
+#>  [5,] "askpass"      "2020-06-04 16:04:05"
+#>  [6,] "abind"        "2020-06-04 16:04:05"
+#>  [7,] "abd"          "2020-06-04 16:04:05"
+#>  [8,] "dplyr"        "2020-06-04 15:43:27"
+#>  [9,] "reactR"       "2020-06-01 08:45:02"
+#> [10,] "shinyalert"   "2020-05-31 21:51:12"
 
 
 # The last package installed 
 
 latest_packages(n = 1)
-#>   packages   modification_time
-#> 1 ggmosaic 2020-06-04 14:24:02
+#>      packages modification_time    
+#> [1,] "batata" "2020-06-04 22:21:35"
 ```
 
 -----
