@@ -4,10 +4,12 @@
 \alias{latest_packages}
 \title{Displaying the latest installed R packages}
 \usage{
-latest_packages(n)
+latest_packages(n = 1, lib = .libPaths())
 }
 \arguments{
-\item{n}{the number of the last installed packages to display (n = 1) will return the last installed package}
+\item{n}{the number of the last installed packages to display. Default to n = 1,  will return the last installed package}
+
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 a data frame

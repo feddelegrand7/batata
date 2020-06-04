@@ -4,7 +4,10 @@
 \alias{rm_yesterday_packages}
 \title{Remove the packages installed yesterday}
 \usage{
-rm_yesterday_packages()
+rm_yesterday_packages(lib = .libPaths())
+}
+\arguments{
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 called for the side effect of removing the yesterday installed packages

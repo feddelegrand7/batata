@@ -4,10 +4,12 @@
 \alias{rm_latest_packages}
 \title{Remove the n latest installed R packages}
 \usage{
-rm_latest_packages(n)
+rm_latest_packages(n = 1, lib = .libPaths())
 }
 \arguments{
-\item{n}{the last number of installed packages to remove}
+\item{n}{the last number of installed packages to remove. Default to 1 for the last installed package}
+
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 called for the side effect of removing the n latest installed packages

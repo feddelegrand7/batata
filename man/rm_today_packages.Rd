@@ -4,7 +4,10 @@
 \alias{rm_today_packages}
 \title{Remove the packages installed in the current day}
 \usage{
-rm_today_packages()
+rm_today_packages(lib = .libPaths())
+}
+\arguments{
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 called for the side effect of removing the today installed packages

@@ -1,6 +1,7 @@
 #' Remove the n latest installed R packages
 #'
-#' @param n the last number of installed packages to remove
+#' @param n the last number of installed packages to remove. Default to 1 for the last installed package
+#' @param lib a character vector giving the library directories. Defaults to the first element in .libPaths()
 #' @return called for the side effect of removing the n latest installed packages
 #' @export
 #'
@@ -15,7 +16,7 @@
 #' }
 
 
-rm_latest_packages <- function(n){
+rm_latest_packages <- function(n = 1, lib = .libPaths()){
 
   decision <- switch(utils::menu(
     choices = c("NO", "No Way!", "No !!!", "Yes", "Let me think a little bit"),
@@ -25,27 +26,25 @@ rm_latest_packages <- function(n){
 
   if (decision == "YES"){
 
-    insta <- utils::installed.packages()
-
-    insta <- as.data.frame(insta)
-
-    packages <- insta$Package
-
-    paths <-   unlist(purrr::map(packages, ~fs::path_package(.)))
+    # retrieving packages' paths
+    pack_paths <- fs::dir_ls(lib)
 
 
-    data <- fs::file_info(paths)
+    # retrieving information about the packages
+    pack_info <- fs::file_info(pack_paths)
 
 
-    last_packages <- data %>%
-      dplyr::arrange(dplyr::desc(modification_time)) %>%
-      utils::head(., n)
 
-    names <- fs::path_split(last_packages$path) %>% sapply(., utils::tail, 1)
+    pack_latest <- head(pack_info[rev(order(pack_info$modification_time)), ], n)
 
-    utils::remove.packages(names)
 
-    message(glue::glue("{names} removed ", .sep = "\n"))
+    # getting the names of the packages (which is the last part of the path)
+    pack_names <-  sapply(fs::path_split(pack_latest$path), utils::tail, 1)
+
+
+    utils::remove.packages(pack_names, lib)
+
+    message(glue::glue("{pack_names} removed ~~~o_o~~~ "))
 
 
   } else {

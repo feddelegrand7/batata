@@ -2,6 +2,7 @@
 #'
 #' @param date the date of interest in yyyy-mm-dd format
 #' @param position takes three arguments "at", "before" or "after". "at" displays the packages installed at the chosen date, "before" before that date and "after" after that date)
+#' @param lib a character vector giving the library directories. Defaults to the first element in .libPaths()
 #' @return a character vector
 #'
 #' @export
@@ -12,54 +13,52 @@
 #' today_packages()
 #' }
 
-rm_since_packages <- function(date, position){
+rm_since_packages <- function(date, position, lib = .libPaths()){
 
 
   decision <- switch(utils::menu(choices = c("NO", "No Way!", "No !!!", "Yes", "Let me think a little bit"), title= glue::glue("Removing the packages that you've installed {position} {date} ?")),"NO", "NO", "NO", "YES", "NO")
 
   if (decision == "YES"){
 
-  insta <- utils::installed.packages()
-
-  insta <- as.data.frame(insta)
-
-  packages <- insta$Package
-
-  paths <-   unlist(purrr::map(packages, ~fs::path_package(.)))
-
-  data <- fs::file_info(paths)
+    # retrieving packages' paths
+    pack_paths <- fs::dir_ls(lib)
 
 
-
-  data$birth_time <- as.Date(data$birth_time)
-
-  today_packages <- data %>% dplyr::filter(birth_time == Sys.Date())
+    # retrieving information about the packages
+    pack_info <- fs::file_info(pack_paths)
 
 
-  data$modification_time <- as.Date(data$modification_time)
+    # transforming date time format to date only
+    pack_info$modification_time <- as.Date(pack_info$modification_time)
 
-  if(position == "at"){
 
-    packages <- data %>% dplyr::filter(modification_time == as.Date(date))
+    if(position == "at"){
 
-  } else if (position == "before") {
+      packs <- pack_info[pack_info$modification_time == as.Date(date), ]
 
-    packages <- data %>% dplyr::filter(modification_time < as.Date(date))
+
+    } else if (position == "before") {
+
+      packs <- pack_info[pack_info$modification_time < as.Date(date), ]
+
+
+    } else {
+
+      packs <- pack_info[pack_info$modification_time > as.Date(date), ]
+
+    }
+
+
+    # getting the names of the packages (which is the last part of the path)
+    pack_names <-  sapply(fs::path_split(packs$path), utils::tail, 1)
+
+
+    utils::remove.packages(pack_names, lib)
+
+    message(glue::glue("{pack_names} removed ~~~o_o~~~ "))
 
 
   } else {
-
-    packages <- data %>% dplyr::filter(modification_time > as.Date(date))
-
-  }
-
-
-  names <- fs::path_split(packages$path) %>% sapply(., utils::tail, 1)
-
-
-  utils::remove.packages(names)
-
-  message(glue::glue("{names} removed ", .sep = "\n"))} else {
 
     message("All right, think again ...")
 

@@ -2,15 +2,18 @@
 % Please edit documentation in R/fresh_start.R
 \name{fresh_start}
 \alias{fresh_start}
-\title{Remove all the installed R packages}
+\title{Remove all the installed R packages from a specified library}
 \usage{
-fresh_start()
+fresh_start(lib = .libPaths())
+}
+\arguments{
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 called for the side effect of removing all installed packages
 }
 \description{
-Remove all the installed R packages
+Remove all the installed R packages from a specified library
 }
 \examples{
 

@@ -4,7 +4,10 @@
 \alias{today_packages}
 \title{Displays the packages installed in the current day}
 \usage{
-today_packages()
+today_packages(lib = .libPaths())
+}
+\arguments{
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 a character vector

@@ -4,12 +4,14 @@
 \alias{rm_since_packages}
 \title{removes installed packages according to a specific date}
 \usage{
-rm_since_packages(date, position)
+rm_since_packages(date, position, lib = .libPaths())
 }
 \arguments{
 \item{date}{the date of interest in yyyy-mm-dd format}
 
 \item{position}{takes three arguments "at", "before" or "after". "at" displays the packages installed at the chosen date, "before" before that date and "after" after that date)}
+
+\item{lib}{a character vector giving the library directories. Defaults to the first element in .libPaths()}
 }
 \value{
 a character vector

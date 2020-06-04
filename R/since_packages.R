@@ -2,6 +2,7 @@
 #'
 #' @param date the date of interest in yyyy-mm-dd format
 #' @param position takes three arguments "at", "before" or "after". "at" displays the packages installed at the chosen date, "before" before that date and "after" after that date)
+#' @param lib a character vector giving the library directories. Defaults to the first element in .libPaths()
 #' @return a character vector
 #'
 #' @export
@@ -12,52 +13,50 @@
 #' since_packages(date = Sys.Date(), position = "at")
 #' }
 
-since_packages <- function(date, position){
+since_packages <- function(date, position, lib = .libPaths()){
+
+  # retrieving packages' paths
+  pack_paths <- fs::dir_ls(lib)
 
 
-  insta <- utils::installed.packages()
-
-  insta <- as.data.frame(insta)
-
-  packages <- insta$Package
-
-  paths <-   unlist(purrr::map(packages, ~fs::path_package(.)))
-
-  data <- fs::file_info(paths)
-
-  data$birth_time <- as.Date(data$birth_time)
-
-  today_packages <- data %>% dplyr::filter(birth_time == Sys.Date())
+  # retrieving information about the packages
+  pack_info <- fs::file_info(pack_paths)
 
 
-  data$modification_time <- as.Date(data$modification_time)
+  # transforming date time format to date only
+  pack_info$modification_time <- as.Date(pack_info$modification_time)
+
+
+
 
   if(position == "at"){
 
-    packages <- data %>% dplyr::filter(modification_time == as.Date(date))
+    packs <- pack_info[pack_info$modification_time == as.Date(date), ]
+
 
   } else if (position == "before") {
 
-    packages <- data %>% dplyr::filter(modification_time < as.Date(date))
+    packs <- pack_info[pack_info$modification_time < as.Date(date), ]
 
 
   } else {
 
-    packages <- data %>% dplyr::filter(modification_time > as.Date(date))
+    packs <- pack_info[pack_info$modification_time > as.Date(date), ]
 
   }
 
 
-  names <- fs::path_split(packages$path) %>% sapply(., utils::tail, 1)
+  # getting the names of the packages (which is the last part of the path)
+  pack_names <-  sapply(fs::path_split(packs$path), utils::tail, 1)
 
 
-
-  if(length(names) == 0){
+  if(length(pack_names) == 0){
 
     message("No packages installed ...")
+
   } else {
 
-    return(names)
+    return(pack_names)
 
   }
 
