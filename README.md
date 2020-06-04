@@ -105,23 +105,23 @@ library(batata)
 
 latest_packages(n = 10)
 #>        packages   modification_time
-#> 1       farrell 2020-06-04 13:11:36
-#> 2        batata 2020-06-03 20:00:55
-#> 3         dplyr 2020-06-03 19:48:27
-#> 4        ralger 2020-06-03 16:32:44
-#> 5          deaR 2020-06-03 15:25:29
-#> 6       writexl 2020-06-03 15:25:28
-#> 7        reactR 2020-06-01 08:45:02
-#> 8    shinyalert 2020-05-31 21:51:12
-#> 9   shinythemes 2020-05-31 16:13:10
-#> 10 shinyobjects 2020-05-31 13:36:26
+#> 1      ggmosaic 2020-06-04 14:24:02
+#> 2  productplots 2020-06-04 14:24:02
+#> 3       farrell 2020-06-04 13:11:36
+#> 4        batata 2020-06-03 20:00:55
+#> 5         dplyr 2020-06-03 19:48:27
+#> 6        ralger 2020-06-03 16:32:44
+#> 7          deaR 2020-06-03 15:25:29
+#> 8       writexl 2020-06-03 15:25:28
+#> 9        reactR 2020-06-01 08:45:02
+#> 10   shinyalert 2020-05-31 21:51:12
 
 
 # The last package installed 
 
 latest_packages(n = 1)
 #>   packages   modification_time
-#> 1  farrell 2020-06-04 13:11:36
+#> 1 ggmosaic 2020-06-04 14:24:02
 ```
 
 -----
