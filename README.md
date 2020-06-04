@@ -38,10 +38,6 @@ install.packages("remotes")
 remotes::install_github("feddelegrand7/batata")
 ```
 
-# Best Food ever
-
-![](man/figures/fm.jpg)
-
 -----
 
 ### `fresh_start()`
