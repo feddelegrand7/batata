@@ -29,7 +29,7 @@ latest_packages <- function(n = 1, lib = .libPaths()){
 
 
 
-  pack_latest <- head(pack_info[rev(order(pack_info$modification_time)), ], n)
+  pack_latest <- utils::head(pack_info[rev(order(pack_info$modification_time)), ], n)
 
 
   # getting the names of the packages (which is the last part of the path)
