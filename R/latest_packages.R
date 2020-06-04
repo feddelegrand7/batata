@@ -37,7 +37,7 @@ latest_packages <- function(n = 1, lib = .libPaths()){
 
 
 
-  as.data.frame(cbind(packages = pack_names, modification_time = as.character(pack_latest$modification_time)))
+  cbind(packages = pack_names, modification_time = as.character(pack_latest$modification_time))
 
 
 
