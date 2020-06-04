@@ -1,7 +1,9 @@
 
 #' Displaying the latest installed R packages
 #'
-#' @param n the number of the last installed packages to display (n = 1) will return the last installed package
+#' @param n the number of the last installed packages to display. Default to n = 1,  will return the last installed package
+#'
+#' @param lib a character vector giving the library directories. Defaults to the first element in .libPaths()
 #'
 #' @return a data frame
 #' @export
@@ -16,24 +18,26 @@
 
 
 
-latest_packages <- function(n){
+latest_packages <- function(n = 1, lib = .libPaths()){
+
+  # retrieving packages' paths
+  pack_paths <- fs::dir_ls(lib)
 
 
-  insta <- utils::installed.packages()
+  # retrieving information about the packages
+  pack_info <- fs::file_info(pack_paths)
 
-  insta <- as.data.frame(insta)
 
-  packages <- insta$Package
 
-  paths <-   unlist(purrr::map(packages, ~fs::path_package(.)))
+  pack_latest <- head(pack_info[rev(order(pack_info$modification_time)), ], n)
 
-  data <- fs::file_info(paths)
 
-  latest <- data %>% dplyr::arrange(dplyr::desc(modification_time)) %>% utils::head(., n )
+  # getting the names of the packages (which is the last part of the path)
+  pack_names <-  sapply(fs::path_split(pack_latest$path), utils::tail, 1)
 
-  names <- fs::path_split(latest$path) %>% sapply(., utils::tail, 1)
 
-  as.data.frame(cbind(packages = names, modification_time = as.character(latest$modification_time)))
+
+  as.data.frame(cbind(packages = pack_names, modification_time = as.character(pack_latest$modification_time)))
 
 
 

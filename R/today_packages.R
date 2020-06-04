@@ -1,4 +1,5 @@
 #' Displays the packages installed in the current day
+#' @param lib a character vector giving the library directories. Defaults to the first element in .libPaths()
 #' @return a character vector
 #' @export
 #'
@@ -8,36 +9,35 @@
 #' today_packages()
 #' }
 
-today_packages <- function(){
+today_packages <- function(lib = .libPaths()){
 
 
-    insta <- utils::installed.packages()
-
-    insta <- as.data.frame(insta)
-
-    packages <- insta$Package
-
-    paths <-   unlist(purrr::map(packages, ~fs::path_package(.)))
-
-    data <- fs::file_info(paths)
+    # retrieving packages' paths
+    pack_paths <- fs::dir_ls(lib)
 
 
-    data$modification_time <- as.Date(data$modification_time)
-
-    today_packages <- data %>% dplyr::filter(modification_time == Sys.Date())
-
+    # retrieving information about the packages
+    pack_info <- fs::file_info(pack_paths)
 
 
-    names <- fs::path_split(today_packages$path) %>% sapply(., utils::tail, 1)
+    # transforming date time format to date only
+    pack_info$modification_time <- as.Date(pack_info$modification_time)
+
+    # getting today packages
+    pack_today <- pack_info[pack_info$modification_time == Sys.Date(), ]
+
+    # getting the names of the packages (which is the last part of the path)
+    pack_names <-  sapply(fs::path_split(pack_today$path), utils::tail, 1)
 
 
 
-    if(length(names) == 0){
+    if(length(pack_names) == 0){
 
       message("No packages installed ...")
+
     } else {
 
-      return(names)
+      return(pack_names)
 
     }
 
