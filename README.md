@@ -5,19 +5,6 @@
 
 <!-- badges: end -->
 
-<style> 
-
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap');
-
-h1 {color: #B0B319;font-family: 'Bitter', serif;}
-
-h2 {color: #B0B319;font-family: 'Bitter', serif;}
-
-h3 {color: #B0B319;font-family: 'Bitter', serif;}
-
-
-</style>
-
 # batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
 
 The goal of batata is to help R users manage R packages removals. For
@@ -51,7 +38,11 @@ install.packages("remotes")
 remotes::install_github("feddelegrand7/batata")
 ```
 
-## \# Functions
+# Best Food ever
+
+![](man/figures/fm.jpg)
+
+-----
 
 ### `fresh_start()`
 
