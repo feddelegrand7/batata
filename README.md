@@ -5,6 +5,19 @@
 
 <!-- badges: end -->
 
+<style> 
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap');
+
+h1 {color: #B0B319;font-family: 'Bitter', serif;}
+
+h2 {color: #B0B319;font-family: 'Bitter', serif;}
+
+h3 {color: #B0B319;font-family: 'Bitter', serif;}
+
+
+</style>
+
 # batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
 
 The goal of batata is to help R users manage R packages removals. For
@@ -12,7 +25,7 @@ example, imagine you’re attending tomorrow an R meet up in which you’ll
 experiment many packages that you don’t want to keep. By the end of the
 meet up, you’ll have to remember each installed package, its name (trust
 me, packages’ names may be complicated). Further, each installed package
-comes with a bunch of dependency which makes the operations more
+might come with a bunch of dependencies which makes the operations more
 complicated. Using the batata package, you can just run
 `rm_today_packages()` (one of many other functions), and you’re clean
 for today. Before removing the packages, batata will prompt you to
@@ -92,12 +105,12 @@ library(batata)
 
 latest_packages(n = 10)
 #>        packages   modification_time
-#> 1        batata 2020-06-03 20:00:55
-#> 2         dplyr 2020-06-03 19:48:27
-#> 3        ralger 2020-06-03 16:32:44
-#> 4          deaR 2020-06-03 15:25:29
-#> 5       writexl 2020-06-03 15:25:28
-#> 6       farrell 2020-06-03 11:18:20
+#> 1       farrell 2020-06-04 13:11:36
+#> 2        batata 2020-06-03 20:00:55
+#> 3         dplyr 2020-06-03 19:48:27
+#> 4        ralger 2020-06-03 16:32:44
+#> 5          deaR 2020-06-03 15:25:29
+#> 6       writexl 2020-06-03 15:25:28
 #> 7        reactR 2020-06-01 08:45:02
 #> 8    shinyalert 2020-05-31 21:51:12
 #> 9   shinythemes 2020-05-31 16:13:10
@@ -108,7 +121,7 @@ latest_packages(n = 10)
 
 latest_packages(n = 1)
 #>   packages   modification_time
-#> 1   batata 2020-06-03 20:00:55
+#> 1  farrell 2020-06-04 13:11:36
 ```
 
 -----

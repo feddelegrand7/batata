@@ -16,9 +16,23 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
+<style> 
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap');
+
+h1 {color: #B0B319;font-family: 'Bitter', serif;}
+
+h2 {color: #B0B319;font-family: 'Bitter', serif;}
+
+h3 {color: #B0B319;font-family: 'Bitter', serif;}
+
+
+</style>
+
+
 # batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
 
-The goal of batata is to help R users manage R packages removals. For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package comes with a bunch of dependency which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision. 
+The goal of batata is to help R users manage R packages removals. For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package might come with a bunch of dependencies which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision. 
 
 # Important 
 
