@@ -1,11 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
+
 <!-- badges: start -->
 
-<!-- badges: end -->
+[![CRAN
+status](https://www.r-pkg.org/badges/version/batata)](https://CRAN.R-project.org/package=batata)
 
-# batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
+![](http://cranlogs.r-pkg.org/badges/grand-total/batata?color=blue)
+
+<a href="https://www.buymeacoffee.com/Fodil" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+<!-- badges: end -->
 
 The goal of batata is to help R users manage R packages removals. For
 example, imagine you’re attending tomorrow an R meet up in which you’ll
@@ -83,24 +90,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages       modification_time    
-#>  [1,] "batata"       "2020-06-04 22:21:35"
-#>  [2,] "ggmosaic"     "2020-06-04 16:33:51"
-#>  [3,] "productplots" "2020-06-04 16:33:51"
-#>  [4,] "assertthat"   "2020-06-04 16:10:07"
-#>  [5,] "askpass"      "2020-06-04 16:04:05"
-#>  [6,] "abind"        "2020-06-04 16:04:05"
-#>  [7,] "abd"          "2020-06-04 16:04:05"
-#>  [8,] "dplyr"        "2020-06-04 15:43:27"
-#>  [9,] "reactR"       "2020-06-01 08:45:02"
-#> [10,] "shinyalert"   "2020-05-31 21:51:12"
+#>       packages        modification_time    
+#>  [1,] "image.darknet" "2020-06-09 00:18:03"
+#>  [2,] "opencv"        "2020-06-08 00:54:41"
+#>  [3,] "batata"        "2020-06-07 22:49:14"
+#>  [4,] "remotes"       "2020-06-07 22:47:42"
+#>  [5,] "GomoGomonoMi"  "2020-06-07 16:11:23"
+#>  [6,] "bamay"         "2020-06-07 13:47:19"
+#>  [7,] "ploover"       "2020-06-07 13:18:54"
+#>  [8,] "xaringan"      "2020-06-06 01:07:06"
+#>  [9,] "zeghed"        "2020-06-06 00:52:42"
+#> [10,] "mywidget"      "2020-06-05 23:58:18"
 
 
-# The last package installed 
+# The last package installed (by default = 1)
 
-latest_packages(n = 1)
-#>      packages modification_time    
-#> [1,] "batata" "2020-06-04 22:21:35"
+latest_packages()
+#>      packages        modification_time    
+#> [1,] "image.darknet" "2020-06-09 00:18:03"
 ```
 
 -----

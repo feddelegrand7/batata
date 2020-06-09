@@ -13,11 +13,22 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+# batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
+
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/batata)](https://CRAN.R-project.org/package=batata)
+
+![](http://cranlogs.r-pkg.org/badges/grand-total/batata?color=blue)
+
+<a href="https://www.buymeacoffee.com/Fodil" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
 <!-- badges: end -->
 
 
-# batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
+
+
+
 
 The goal of batata is to help R users manage R packages removals. For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package might come with a bunch of dependencies which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision. 
 
@@ -84,9 +95,9 @@ library(batata)
 latest_packages(n = 10)
 
 
-# The last package installed 
+# The last package installed (by default = 1)
 
-latest_packages(n = 1)
+latest_packages()
 
 
 
