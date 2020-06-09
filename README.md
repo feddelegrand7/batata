@@ -29,10 +29,17 @@ before making a decision.
 
 ## Installation
 
-You can install the development version of batata from Github
+You can install the `batata` package from CRAN with:
 
 ``` r
-install.packages("remotes")
+
+install.packages("batata")
+```
+
+You can install the development version of `batata` from Github with:
+
+``` r
+install.packages("remotes") # if not installed
 
 remotes::install_github("feddelegrand7/batata")
 ```

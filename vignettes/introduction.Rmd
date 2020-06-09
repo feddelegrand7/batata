@@ -27,6 +27,18 @@ The goal of batata is to help R users manage R packages removals. For example, i
 
 ## Installation
 
+
+
+You can install the stable version of batata from CRAN with: 
+```{r, eval=FALSE}
+
+install.packages("batata")
+
+
+```
+
+
+
 You can install the development version of batata from Github
 
 ```{r, eval=FALSE}
@@ -37,7 +49,6 @@ remotes::install_github("feddelegrand7/batata")
 
 ```
 
-# Functions
 -------------------------------
 
 ### `fresh_start()`
