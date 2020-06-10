@@ -27,6 +27,21 @@ confirm your decision (which adds a certain degree of security), you can
 also run `today_packages()` to check all the today installed packages
 before making a decision.
 
+`batata` takes into account the **modification time** of the packages
+instead of the **birth time**. As such, if you decide to update a
+package to a newer version, `batata` will consider it as a new package
+(which is technically true as a new package will be installed).
+Nonetheless, you can always slice the `rm_today_packages()` (same for
+the other functions) after checking with `today_packages()`. For
+example, it’s possible to remove all the packages installed today except
+for the last one with:
+
+``` r
+library(batata)
+
+rm_today_packages[-1]
+```
+
 ## Installation
 
 You can install the `batata` package from CRAN with:
@@ -98,23 +113,23 @@ library(batata)
 
 latest_packages(n = 10)
 #>       packages        modification_time    
-#>  [1,] "image.darknet" "2020-06-09 00:18:03"
-#>  [2,] "opencv"        "2020-06-08 00:54:41"
-#>  [3,] "batata"        "2020-06-07 22:49:14"
-#>  [4,] "remotes"       "2020-06-07 22:47:42"
-#>  [5,] "GomoGomonoMi"  "2020-06-07 16:11:23"
-#>  [6,] "bamay"         "2020-06-07 13:47:19"
-#>  [7,] "ploover"       "2020-06-07 13:18:54"
-#>  [8,] "xaringan"      "2020-06-06 01:07:06"
-#>  [9,] "zeghed"        "2020-06-06 00:52:42"
-#> [10,] "mywidget"      "2020-06-05 23:58:18"
+#>  [1,] "glue"          "2020-06-10 12:43:09"
+#>  [2,] "tidyverse"     "2020-06-10 12:40:39"
+#>  [3,] "xaringan"      "2020-06-10 12:39:10"
+#>  [4,] "askpass"       "2020-06-10 12:38:04"
+#>  [5,] "skimr"         "2020-06-10 12:35:52"
+#>  [6,] "broom"         "2020-06-10 12:31:44"
+#>  [7,] "batata"        "2020-06-10 12:29:38"
+#>  [8,] "image.darknet" "2020-06-09 00:18:03"
+#>  [9,] "opencv"        "2020-06-08 00:54:41"
+#> [10,] "remotes"       "2020-06-07 22:47:42"
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>      packages        modification_time    
-#> [1,] "image.darknet" "2020-06-09 00:18:03"
+#>      packages modification_time    
+#> [1,] "glue"   "2020-06-10 12:43:09"
 ```
 
 -----
