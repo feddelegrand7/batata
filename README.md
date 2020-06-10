@@ -31,16 +31,6 @@ before making a decision.
 instead of the **birth time**. As such, if you decide to update a
 package to a newer version, `batata` will consider it as a new package
 (which is technically true as a new package will be installed).
-Nonetheless, you can always slice the `rm_today_packages()` (same for
-the other functions) after checking with `today_packages()`. For
-example, it’s possible to remove all the packages installed today except
-for the last one with:
-
-``` r
-library(batata)
-
-rm_today_packages[-1]
-```
 
 ## Installation
 
@@ -113,23 +103,23 @@ library(batata)
 
 latest_packages(n = 10)
 #>       packages        modification_time    
-#>  [1,] "glue"          "2020-06-10 12:43:09"
-#>  [2,] "tidyverse"     "2020-06-10 12:40:39"
-#>  [3,] "xaringan"      "2020-06-10 12:39:10"
-#>  [4,] "askpass"       "2020-06-10 12:38:04"
-#>  [5,] "skimr"         "2020-06-10 12:35:52"
-#>  [6,] "broom"         "2020-06-10 12:31:44"
-#>  [7,] "batata"        "2020-06-10 12:29:38"
-#>  [8,] "image.darknet" "2020-06-09 00:18:03"
-#>  [9,] "opencv"        "2020-06-08 00:54:41"
-#> [10,] "remotes"       "2020-06-07 22:47:42"
+#>  [1,] "remotes"       "2020-06-10 14:15:21"
+#>  [2,] "glue"          "2020-06-10 12:43:09"
+#>  [3,] "tidyverse"     "2020-06-10 12:40:39"
+#>  [4,] "xaringan"      "2020-06-10 12:39:10"
+#>  [5,] "askpass"       "2020-06-10 12:38:04"
+#>  [6,] "skimr"         "2020-06-10 12:35:52"
+#>  [7,] "broom"         "2020-06-10 12:31:44"
+#>  [8,] "batata"        "2020-06-10 12:29:38"
+#>  [9,] "image.darknet" "2020-06-09 00:18:03"
+#> [10,] "diffobj"       "2020-06-04 23:30:39"
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>      packages modification_time    
-#> [1,] "glue"   "2020-06-10 12:43:09"
+#>      packages  modification_time    
+#> [1,] "remotes" "2020-06-10 14:15:21"
 ```
 
 -----
