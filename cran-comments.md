@@ -11,3 +11,6 @@ Duration: 2m 12.7s
 0 errors v | 0 warnings v | 0 notes v
 
 R CMD check succeeded
+
+
+* I've fixed some bugs related to remove.packages() function.Indeed, in some situation the packages weren't removed completely (dll remaining) which was misleading. I've modified this function with fs::dir_delete() much more consistent. 
