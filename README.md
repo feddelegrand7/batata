@@ -49,6 +49,8 @@ install.packages("remotes") # if not installed
 remotes::install_github("feddelegrand7/batata")
 ```
 
+# It’s preferable to restart R after running the rm\_\* functions \!
+
 -----
 
 ### `fresh_start()`
@@ -102,24 +104,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages        modification_time    
-#>  [1,] "remotes"       "2020-06-10 14:15:21"
-#>  [2,] "glue"          "2020-06-10 12:43:09"
-#>  [3,] "tidyverse"     "2020-06-10 12:40:39"
-#>  [4,] "xaringan"      "2020-06-10 12:39:10"
-#>  [5,] "askpass"       "2020-06-10 12:38:04"
-#>  [6,] "skimr"         "2020-06-10 12:35:52"
-#>  [7,] "broom"         "2020-06-10 12:31:44"
-#>  [8,] "batata"        "2020-06-10 12:29:38"
-#>  [9,] "image.darknet" "2020-06-09 00:18:03"
-#> [10,] "diffobj"       "2020-06-04 23:30:39"
+#>       packages    modification_time    
+#>  [1,] "batata"    "2020-06-16 00:56:05"
+#>  [2,] "dplyr"     "2020-06-10 15:33:32"
+#>  [3,] "gganimate" "2020-06-10 14:22:52"
+#>  [4,] "remotes"   "2020-06-10 14:15:21"
+#>  [5,] "glue"      "2020-06-10 12:43:09"
+#>  [6,] "tidyverse" "2020-06-10 12:40:39"
+#>  [7,] "xaringan"  "2020-06-10 12:39:10"
+#>  [8,] "askpass"   "2020-06-10 12:38:04"
+#>  [9,] "skimr"     "2020-06-10 12:35:52"
+#> [10,] "broom"     "2020-06-10 12:31:44"
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>      packages  modification_time    
-#> [1,] "remotes" "2020-06-10 14:15:21"
+#>      packages modification_time    
+#> [1,] "batata" "2020-06-16 00:56:05"
 ```
 
 -----
