@@ -34,11 +34,16 @@ rm_today_packages <- function(lib = .libPaths()){
     # getting today packages
     pack_today <- pack_info[pack_info$modification_time == Sys.Date(), ]
 
-    # getting the names of the packages (which is the last part of the path)
+
     pack_names <-  sapply(fs::path_split(pack_today$path), utils::tail, 1)
 
 
-    utils::remove.packages(pack_names, lib)
+    # removing the packages' directory
+    fs::dir_delete(pack_today$path)
+
+
+    # getting the names of the packages (which is the last part of the path)
+
 
     message(glue::glue("{pack_names} removed ~~~o_o~~~ "))
 

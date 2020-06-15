@@ -38,11 +38,17 @@ rm_latest_packages <- function(n = 1, lib = .libPaths()){
     pack_latest <- utils::head(pack_info[rev(order(pack_info$modification_time)), ], n)
 
 
+
+
     # getting the names of the packages (which is the last part of the path)
     pack_names <-  sapply(fs::path_split(pack_latest$path), utils::tail, 1)
 
 
-    utils::remove.packages(pack_names, lib)
+
+    # removing the packages directory
+    fs::dir_delete(pack_latest$path)
+
+
 
     message(glue::glue("{pack_names} removed ~~~o_o~~~ "))
 
