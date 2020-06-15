@@ -54,8 +54,6 @@ remotes::install_github("feddelegrand7/batata")
 
 ```
 
-# It's preferable to restart R after running the rm_* functions ! 
-
 
 -------------------------------
 
