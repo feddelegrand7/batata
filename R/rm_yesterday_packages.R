@@ -18,26 +18,23 @@ rm_yesterday_packages <- function(lib = .libPaths()){
 
   if (decision == "YES"){
 
-    # retrieving packages' paths
     pack_paths <- fs::dir_ls(lib)
 
+    mod_time <- file.mtime(pack_paths)
 
-    # retrieving information about the packages
-    pack_info <- fs::file_info(pack_paths)
+    mod_time <- as.Date(lubridate::ymd_hms(mod_time))
 
-
-    # transforming date time format to date only
-    pack_info$modification_time <- as.Date(pack_info$modification_time)
+    data <- data.frame(pack_paths, mod_time)
 
     # getting yesterday packages
-    pack_yesterday <- pack_info[pack_info$modification_time == Sys.Date() - 1, ]
+    pack_yesterday <- data[data$mod_time == Sys.Date() - 1, ]
 
     # getting the names of the packages (which is the last part of the path)
-    pack_names <-  sapply(fs::path_split(pack_yesterday$path), utils::tail, 1)
+    pack_names <-  sapply(fs::path_split(pack_yesterday$pack_paths), utils::tail, 1)
 
 
     # removing packages
-    fs::dir_delete(pack_yesterday$path)
+    fs::dir_delete(pack_yesterday$pack_paths)
 
 
     message(glue::glue("{pack_names} removed ~~~o_o~~~ "))

@@ -36,11 +36,7 @@ fresh_start <- function(lib = .libPaths()){
     pack_paths <- fs::dir_ls(lib)
 
 
-    # getting the names of the packages (which is the last part of the path)
-    pack_names <-  sapply(fs::path_split(pack_paths), utils::tail, 1)
-
-    # removing the packages
-    utils::remove.packages(pack_names, lib)
+    fs::dir_delete(pack_paths)
 
 
 
