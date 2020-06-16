@@ -51,7 +51,7 @@ rm_since_packages <- function(date, position, lib = .libPaths()){
 
 
     # removing packages
-    fs::dir_delete(packs$pack_paths)
+    utils::remove.packages(pack_names)
 
 
     message(glue::glue("{pack_names} removed ~~~o_o~~~ "))

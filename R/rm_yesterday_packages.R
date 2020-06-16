@@ -34,7 +34,7 @@ rm_yesterday_packages <- function(lib = .libPaths()){
 
 
     # removing packages
-    fs::dir_delete(pack_yesterday$pack_paths)
+    utils::remove.packages(pack_names)
 
 
     message(glue::glue("{pack_names} removed ~~~o_o~~~ "))

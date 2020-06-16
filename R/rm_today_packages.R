@@ -37,7 +37,7 @@ rm_today_packages <- function(lib = .libPaths()){
 
 
     # removing the packages' directory
-    fs::dir_delete(pack_today$pack_paths)
+    utils::remove.packages(pack_names)
 
 
     # getting the names of the packages (which is the last part of the path)

@@ -46,7 +46,7 @@ rm_latest_packages <- function(n = 1, lib = .libPaths()){
 
 
     # removing the packages directory
-    fs::dir_delete(pack_latest$path)
+    utils::remove.packages(pack_names)
 
 
 
