@@ -5,12 +5,12 @@
 
   
 
--- R CMD check results --------------------------------------- batata 0.1.0 ----
-Duration: 2m 12.7s
+-- R CMD check results ---------------------------------- batata 0.1.1 ----
+Duration: 20.3s
 
-0 errors v | 0 warnings v | 0 notes v
+0 errors √ | 0 warnings √ | 0 notes √
 
 R CMD check succeeded
 
 
-* I've fixed some bugs related to remove.packages() function.Indeed, in some situation the packages weren't removed completely (dll remaining) which was misleading. I've modified this function with fs::dir_delete() much more consistent. 
+* the modification time provided by the fs package wasn't exact in some situation. As such, I've change the fs::file_info() to file.mtime() base R function. 

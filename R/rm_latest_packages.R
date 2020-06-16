@@ -26,26 +26,21 @@ rm_latest_packages <- function(n = 1, lib = .libPaths()){
 
   if (decision == "YES"){
 
-    # retrieving packages' paths
     pack_paths <- fs::dir_ls(lib)
 
+    mod_time <- file.mtime(pack_paths)
 
-    # retrieving information about the packages
-    pack_info <- fs::file_info(pack_paths)
-
-
-
-    pack_latest <- utils::head(pack_info[rev(order(pack_info$modification_time)), ], n)
+    data <- data.frame(pack_paths, mod_time)
 
 
+    pack_latest <- utils::head(data[rev(order(data$mod_time)), ], n)
 
 
     # getting the names of the packages (which is the last part of the path)
-    pack_names <-  sapply(fs::path_split(pack_latest$path), utils::tail, 1)
+    pack_names <-  sapply(fs::path_split(pack_latest$pack_paths), utils::tail, 1)
 
 
-
-    # removing the packages directory
+    # removing the packages
     utils::remove.packages(pack_names)
 
 

@@ -34,6 +34,12 @@ package to a newer version, `batata` will consider it as a new package
 
 ## Installation
 
+You can install the `batata` package from CRAN with:
+
+``` r
+install.packages("batata")
+```
+
 Install the development version of `batata` from Github with:
 
 ``` r
@@ -95,24 +101,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages   modification_time
-#> 1    rmarkdown 2020-06-16 03:04:02
-#> 2      tinytex 2020-06-16 03:03:57
-#> 3    base64enc 2020-06-16 03:03:56
-#> 4       batata 2020-06-16 03:02:01
-#> 5     devtools 2020-06-16 02:54:53
-#> 6        withr 2020-06-16 02:54:53
-#> 7     testthat 2020-06-16 02:54:52
-#> 8  sessioninfo 2020-06-16 02:54:52
-#> 9    rversions 2020-06-16 02:54:52
-#> 10  rstudioapi 2020-06-16 02:54:52
+#>       packages      modification_time    
+#>  [1,] "batata"      "2020-06-16 13:26:21"
+#>  [2,] "rmarkdown"   "2020-06-16 03:10:15"
+#>  [3,] "tinytex"     "2020-06-16 03:10:13"
+#>  [4,] "base64enc"   "2020-06-16 03:10:13"
+#>  [5,] "devtools"    "2020-06-16 02:54:53"
+#>  [6,] "withr"       "2020-06-16 02:54:53"
+#>  [7,] "testthat"    "2020-06-16 02:54:52"
+#>  [8,] "sessioninfo" "2020-06-16 02:54:52"
+#>  [9,] "rversions"   "2020-06-16 02:54:52"
+#> [10,] "rstudioapi"  "2020-06-16 02:54:52"
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>    packages   modification_time
-#> 1 rmarkdown 2020-06-16 03:04:02
+#>      packages modification_time    
+#> [1,] "batata" "2020-06-16 13:26:21"
 ```
 
 -----
