@@ -34,22 +34,13 @@ package to a newer version, `batata` will consider it as a new package
 
 ## Installation
 
-You can install the `batata` package from CRAN with:
-
-``` r
-
-install.packages("batata")
-```
-
-You can install the development version of `batata` from Github with:
+Install the development version of `batata` from Github with:
 
 ``` r
 install.packages("remotes") # if not installed
 
 remotes::install_github("feddelegrand7/batata")
 ```
-
-# It’s preferable to restart R after running the rm\_\* functions \!
 
 -----
 
@@ -104,24 +95,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages    modification_time    
-#>  [1,] "batata"    "2020-06-16 00:56:05"
-#>  [2,] "dplyr"     "2020-06-10 15:33:32"
-#>  [3,] "gganimate" "2020-06-10 14:22:52"
-#>  [4,] "remotes"   "2020-06-10 14:15:21"
-#>  [5,] "glue"      "2020-06-10 12:43:09"
-#>  [6,] "tidyverse" "2020-06-10 12:40:39"
-#>  [7,] "xaringan"  "2020-06-10 12:39:10"
-#>  [8,] "askpass"   "2020-06-10 12:38:04"
-#>  [9,] "skimr"     "2020-06-10 12:35:52"
-#> [10,] "broom"     "2020-06-10 12:31:44"
+#>       packages   modification_time
+#> 1    rmarkdown 2020-06-16 03:04:02
+#> 2      tinytex 2020-06-16 03:03:57
+#> 3    base64enc 2020-06-16 03:03:56
+#> 4       batata 2020-06-16 03:02:01
+#> 5     devtools 2020-06-16 02:54:53
+#> 6        withr 2020-06-16 02:54:53
+#> 7     testthat 2020-06-16 02:54:52
+#> 8  sessioninfo 2020-06-16 02:54:52
+#> 9    rversions 2020-06-16 02:54:52
+#> 10  rstudioapi 2020-06-16 02:54:52
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>      packages modification_time    
-#> [1,] "batata" "2020-06-16 00:56:05"
+#>    packages   modification_time
+#> 1 rmarkdown 2020-06-16 03:04:02
 ```
 
 -----
