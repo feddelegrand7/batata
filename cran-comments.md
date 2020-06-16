@@ -14,3 +14,5 @@ R CMD check succeeded
 
 
 * the modification time provided by the fs package wasn't exact in some situation. As such, I've change the fs::file_info() to file.mtime() base R function. 
+
+* I've also fixed some bugs concerning the dates using the lubridate package. 
