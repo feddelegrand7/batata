@@ -17,12 +17,21 @@ knitr::opts_chunk$set(
 # batata <a><img src='man/figures/hex.png' align="right" height="200" /></a>
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/batata)](https://CRAN.R-project.org/package=batata)
 
-![](http://cranlogs.r-pkg.org/badges/grand-total/batata?color=blue)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/batata)](https://cran.r-project.org/package=batata)
 
-<a href="https://www.buymeacoffee.com/Fodil" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+[![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/batata)](https://cran.r-project.org/package=batata)
 
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/batata)](https://cran.r-project.org/package=batata)
+
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/batata)](https://cran.r-project.org/package=batata)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+
+
+[![R badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/batata)
+
+[![Travis build status](https://travis-ci.com/feddelegrand7/batata.svg?branch=master)](https://travis-ci.com/feddelegrand7/batata)
 <!-- badges: end -->
 
 

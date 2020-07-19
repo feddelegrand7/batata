@@ -5,13 +5,23 @@
 
 <!-- badges: start -->
 
-[![CRAN
-status](https://www.r-pkg.org/badges/version/batata)](https://CRAN.R-project.org/package=batata)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/batata)](https://cran.r-project.org/package=batata)
 
-![](http://cranlogs.r-pkg.org/badges/grand-total/batata?color=blue)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/batata)](https://cran.r-project.org/package=batata)
 
-<a href="https://www.buymeacoffee.com/Fodil" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/batata)](https://cran.r-project.org/package=batata)
 
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/batata)](https://cran.r-project.org/package=batata)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/batata)
+
+[![Travis build
+status](https://travis-ci.com/feddelegrand7/batata.svg?branch=master)](https://travis-ci.com/feddelegrand7/batata)
 <!-- badges: end -->
 
 The goal of batata is to help R users manage R packages removals. For
@@ -101,24 +111,24 @@ library(batata)
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages      modification_time    
-#>  [1,] "batata"      "2020-06-16 13:26:21"
-#>  [2,] "rmarkdown"   "2020-06-16 03:10:15"
-#>  [3,] "tinytex"     "2020-06-16 03:10:13"
-#>  [4,] "base64enc"   "2020-06-16 03:10:13"
-#>  [5,] "devtools"    "2020-06-16 02:54:53"
-#>  [6,] "withr"       "2020-06-16 02:54:53"
-#>  [7,] "testthat"    "2020-06-16 02:54:52"
-#>  [8,] "sessioninfo" "2020-06-16 02:54:52"
-#>  [9,] "rversions"   "2020-06-16 02:54:52"
-#> [10,] "rstudioapi"  "2020-06-16 02:54:52"
+#>       packages   modification_time
+#> 1        BARIS 2020-07-19 20:32:58
+#> 2      janitor 2020-07-19 20:15:23
+#> 3    snakecase 2020-07-19 20:15:23
+#> 4          XML 2020-07-19 20:15:17
+#> 5   downloader 2020-07-19 20:15:03
+#> 6  badgecreatr 2020-07-19 17:25:56
+#> 7         pins 2020-07-18 23:49:54
+#> 8     filelock 2020-07-18 23:49:54
+#> 9         icon 2020-07-18 14:43:00
+#> 10   prettydoc 2020-07-18 02:20:26
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>      packages modification_time    
-#> [1,] "batata" "2020-06-16 13:26:21"
+#>   packages   modification_time
+#> 1    BARIS 2020-07-19 20:32:58
 ```
 
 -----
