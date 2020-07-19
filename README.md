@@ -17,11 +17,12 @@ downloads](https://cranlogs.r-pkg.org/badges/grand-total/batata)](https://cran.r
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 
+[![Travis build
+status](https://travis-ci.com/feddelegrand7/batata.svg?branch=master)](https://travis-ci.com/feddelegrand7/batata)
+
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/batata)
 
-[![Travis build
-status](https://travis-ci.com/feddelegrand7/batata.svg?branch=master)](https://travis-ci.com/feddelegrand7/batata)
 <!-- badges: end -->
 
 The goal of batata is to help R users manage R packages removals. For
