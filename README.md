@@ -12,10 +12,10 @@ downloads](https://cranlogs.r-pkg.org/badges/batata)](https://cran.r-project.org
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/batata)](https://cran.r-project.org/package=batata)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
-[![Travis build
-status](https://travis-ci.com/feddelegrand7/batata.svg?branch=master)](https://travis-ci.com/feddelegrand7/batata)
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/batata)
+[![R build
+status](https://github.com/feddelegrand7/batata/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/batata/actions)
 <!-- badges: end -->
 
 The goal of batata is to help R users manage R packages removals. For
@@ -52,7 +52,7 @@ install.packages("remotes") # if not installed
 remotes::install_github("feddelegrand7/batata")
 ```
 
------
+------------------------------------------------------------------------
 
 ### `fresh_start()`
 
@@ -61,7 +61,7 @@ Particularly useful when moving from an R version to another. This
 function is quite dangerous, so you’ll be prompted twice to make sure
 that you’re absolutely certain to run it.
 
------
+------------------------------------------------------------------------
 
 ### `today_packages()` and `rm_today_packages()`
 
@@ -69,7 +69,7 @@ that you’re absolutely certain to run it.
 running that function and in parallel, `rm_today_packages()` removes the
 corresponding packages.
 
------
+------------------------------------------------------------------------
 
 ### `yesterday_packages()` and `rm_yesterday_packages()`
 
@@ -77,21 +77,21 @@ corresponding packages.
 before you’re running that function and in parallel,
 `rm_yesterday_packages()` removes the corresponding packages.
 
------
+------------------------------------------------------------------------
 
 ### `since_packages()` and `rm_since_packages()`
 
 `since_packages()` displays the packages that you’ve installed according
 to a specific date. It has two argument:
 
-  - *date*: the considered date in *yyyy-mm-dd* format ;
-  - *position*: whether to display the installed packages **at** that
+-   *date*: the considered date in *yyyy-mm-dd* format ;
+-   *position*: whether to display the installed packages **at** that
     date, **before** that date or **after** that date.
 
 `rm_since_package()` works similarly except that it removes the packages
 instead of displaying them.
 
------
+------------------------------------------------------------------------
 
 ### `latest_packages()` and `rm_latest_packages()`
 
@@ -99,33 +99,32 @@ Suppose you want to check out the last 10 packages that you’ve
 installed, or, maybe you want to display the last installed package:
 
 ``` r
-
 library(batata)
 
 # The 10 last installed packages
 
 latest_packages(n = 10)
-#>       packages   modification_time
-#> 1        BARIS 2020-07-19 20:32:58
-#> 2      janitor 2020-07-19 20:15:23
-#> 3    snakecase 2020-07-19 20:15:23
-#> 4          XML 2020-07-19 20:15:17
-#> 5   downloader 2020-07-19 20:15:03
-#> 6  badgecreatr 2020-07-19 17:25:56
-#> 7         pins 2020-07-18 23:49:54
-#> 8     filelock 2020-07-18 23:49:54
-#> 9         icon 2020-07-18 14:43:00
-#> 10   prettydoc 2020-07-18 02:20:26
+#>         packages   modification_time
+#> 1   GomoGomonoMi 2020-12-10 21:48:58
+#> 2         ralger 2020-12-10 21:44:01
+#> 3  flexdashboard 2020-12-09 21:53:06
+#> 4         themis 2020-12-09 19:31:19
+#> 5     unbalanced 2020-12-09 19:31:19
+#> 6           ROSE 2020-12-09 19:31:19
+#> 7           RANN 2020-12-09 19:31:19
+#> 8            FNN 2020-12-09 19:31:19
+#> 9            mlr 2020-12-09 19:31:19
+#> 10   parallelMap 2020-12-09 19:31:19
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
-#>   packages   modification_time
-#> 1    BARIS 2020-07-19 20:32:58
+#>       packages   modification_time
+#> 1 GomoGomonoMi 2020-12-10 21:48:58
 ```
 
------
+------------------------------------------------------------------------
 
 ## Code of Conduct
 
