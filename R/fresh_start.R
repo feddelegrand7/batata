@@ -15,21 +15,20 @@
 #' }
 
 
-fresh_start <- function(lib = .libPaths()){
+fresh_start <- function(lib = .libPaths()) {
 
   decision <- switch(utils::menu(choices = c("NO", "No Way!", "No !!!", "Yes", "Let me think a little bit"),
-                   title="Do you really want to remove all your packages ?"),"NO", "NO", "NO", "YES", "NO")
+                   title = "Do you really want to remove all your packages ?"), "NO", "NO", "NO", "YES", "NO")
 
 
-  if (decision == "YES"){
+  if (decision == "YES") {
 
     decision2 <- switch(utils::menu(choices = c("NO", "No Way!", "No !!!", "Yes", "Let me think a little bit"),
-                                   title="Are you really really really sure about it ?"),"NO", "NO", "NO", "YES", "NO")
-
+                                   title = "Are you really really really sure about it ?"), "NO", "NO", "NO", "YES", "NO")
 
   }
 
-  if(decision2 == "YES"){
+  if (decision2 == "YES") {
 
 
     # retrieving packages' paths
@@ -53,8 +52,3 @@ fresh_start <- function(lib = .libPaths()){
 
 
 }
-
-
-
-
-
