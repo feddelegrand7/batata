@@ -20,8 +20,6 @@
 
 latest_packages <- function(n = 1, lib = .libPaths()){
 
-
-
   pack_paths <- fs::dir_ls(lib)
 
   mod_time <- file.mtime(pack_paths)
@@ -37,7 +35,8 @@ latest_packages <- function(n = 1, lib = .libPaths()){
 
 
 
-  data.frame(packages = pack_names, modification_time = as.character(pack_latest$mod_time))
+  data.frame(packages = pack_names,
+            modification_time = pack_latest$mod_time)
 
 
 
