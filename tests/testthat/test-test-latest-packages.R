@@ -64,18 +64,5 @@ test_that("expect error when n not numeric or not length 1", {
 })
 
 
-test_that("expect an error when directory doesn't exist", {
-
-  expect_error(latest_packages(, lib = "C://directory/doesnt/exist"))
-
-})
-
-
-test_that("expect an error when directory is not character", {
-
-  expect_error(latest_packages(, lib = 123))
-
-})
-
 
 

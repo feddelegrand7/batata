@@ -36,20 +36,6 @@ rm_latest_packages <- function(n = 1, lib = .libPaths()){
 
   }
 
-  if (!is.character(lib)) {
-
-
-    stop(paste0("'lib' must be of type character not ",
-                typeof(lib)))
-
-  }
-
-
-  if (!dir.exists(lib)) {
-
-    stop(paste0("the following directory doesn't seem to exist ===>",
-                lib))
-  }
 
 
   decision <- switch(utils::menu(
