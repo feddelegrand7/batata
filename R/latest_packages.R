@@ -20,6 +20,42 @@
 
 latest_packages <- function(n = 1, lib = .libPaths()){
 
+
+  if (!is.numeric(n)) {
+
+    stop(paste0("'n' must be numeric not ", typeof(n)))
+
+  }
+
+  if (!length(n) == 1) {
+
+    stop(paste0("'n' must be of length 1 not ", length(n)))
+
+  }
+
+  if (n < 1) {
+
+    stop(" 'n' must be greater or equal than 1")
+
+  }
+
+  if (!is.character(lib)) {
+
+
+    stop(paste0("'lib' must be of type character not ",
+                typeof(lib)))
+
+  }
+
+
+  if (!dir.exists(lib)) {
+
+    stop(paste0("the following directory doesn't seem to exist ===>",
+                lib))
+  }
+
+
+
   pack_paths <- fs::dir_ls(lib)
 
   mod_time <- file.mtime(pack_paths)
