@@ -147,9 +147,10 @@ Note that if the starred repo is not available on CRAN,
 
 ### `install_starred_github()`
 
-The functions behaves the same way as `install_starred_cran()` except
-that it will install the repositories from Github (not from CRAN), so
-that you can install packages that are not available on CRAN.
+`install_starred_github()` behaves the same way as
+`install_starred_cran()` except that it will install the repositories
+from Github (not from CRAN), so that you can install packages that are
+not available on CRAN.
 
 ``` r
 install_starred_github(github_user = 'feddelegrand7', 
