@@ -84,5 +84,36 @@ install_starred_github <- function(github_user, n = 5, upgrade = "never") {
 
 }
 
+#' Install the most starred CRAN packages
+#'
+#' @param n the most starred starred CRAN packages. Defaults to 10.
+#' in this case the function will look at the 10 most starred R repo and install them
+#' if available on CRAN.
+#'
+#' @return called for the side effect of installing most starred CRAN packages
+#' @export
+#'
 
 
+install_most_starred <- function(n = 10) {
+
+  if (!is.numeric(n)) {
+
+    stop("the 'n' parameter must be numeric not ", typeof(n))
+
+  }
+
+
+  data <- jsonlite::fromJSON(glue::glue("https://api.github.com/search/repositories?q=language:R&sort=stars&order=desc&per_page={n}"))
+
+  data <- as.data.frame(data)
+
+  most_starred <- data$items.name
+
+  most_starred_no_na <- Filter(function(x) {!is.na(x)}, most_starred)
+
+  purrr::map(most_starred_no_na,
+             purrr::safely(~utils::install.packages(.x)))
+
+
+}
