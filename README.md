@@ -109,23 +109,23 @@ library(batata)
 
 latest_packages(n = 10)
 #>      packages   modification_time
-#> 1       lintr 2021-01-21 02:16:07
-#> 2        httr 2021-01-21 02:15:42
-#> 3      batata 2021-01-21 02:14:46
-#> 4        brms 2021-01-21 01:20:13
-#> 5  clisymbols 2021-01-21 01:20:13
-#> 6        xfun 2021-01-21 00:53:20
-#> 7     distill 2021-01-21 00:52:36
-#> 8        covr 2021-01-21 00:52:35
-#> 9      thankr 2021-01-21 00:52:35
-#> 10    janitor 2021-01-21 00:52:35
+#> 1       dplyr 2021-01-21 17:05:41
+#> 2       shiny 2021-01-21 17:05:09
+#> 3     ggplot2 2021-01-21 17:03:07
+#> 4      batata 2021-01-21 17:02:04
+#> 5       lintr 2021-01-21 02:16:07
+#> 6        httr 2021-01-21 02:15:42
+#> 7        brms 2021-01-21 01:20:13
+#> 8  clisymbols 2021-01-21 01:20:13
+#> 9        xfun 2021-01-21 00:53:20
+#> 10    distill 2021-01-21 00:52:36
 
 
 # The last package installed (by default = 1)
 
 latest_packages()
 #>   packages   modification_time
-#> 1    lintr 2021-01-21 02:16:07
+#> 1    dplyr 2021-01-21 17:05:41
 ```
 
 # Packages Installations
@@ -160,6 +160,22 @@ install_starred_github(github_user = 'feddelegrand7',
 
 The above code chunk will look for the last five repositories that I’ve
 starred, filter out non-R repos and install them.
+
+### `install_most_starred()`
+
+`install_starred_github()` allows you the install the most starred CRAN
+packages that are available on Github. It takes one argument `n` that
+specifies the number of the most starred R packages that you want to
+install. For example:
+
+``` r
+install_most_starred(n = 10)
+```
+
+The above chunk will look for the 10 most starred R repositories and it
+will install them if available on CRAN. Of course, it’ll ignore R
+repositories that are not packages, e.g
+[R4DS](https://github.com/hadley/r4ds) repo.
 
 ## Aknowledgement
 

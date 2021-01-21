@@ -143,6 +143,18 @@ The above code chunk will look for the last five repositories that I've starred,
 
 
 
+### `install_most_starred()`
+
+`install_starred_github()` allows you the install the most starred CRAN packages that are available on Github. It takes one argument `n` that specifies the number of the most starred R packages that you want to install. For example: 
+
+
+```{r, eval=FALSE}
+install_most_starred(n = 10)
+```
+
+The above chunk will look for the 10 most starred R repositories and it will install them if available on CRAN. Of course, it'll ignore R repositories that are not packages, e.g  [R4DS](https://github.com/hadley/r4ds) repo.
+
+
 
 ## Aknowledgement 
 
