@@ -1,15 +1,13 @@
 
-data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/feddelegrand7/starred?per_page=5"))
-
 test_that("expect an error when wrong parameters provided", {
 
   expect_error(
 
-    install_starred_cran(github_user = 123123,
+    install_starred_github(github_user = 123123,
                          n = 10),
     regexp = "'github_user' must be provided as a character string"
 
-      )
+  )
 
   expect_error(
 
@@ -21,26 +19,22 @@ test_that("expect an error when wrong parameters provided", {
 
   expect_error(
 
-    install_starred_cran(github_user = "feddelegrand7",
+    install_starred_github(github_user = "feddelegrand7",
                          n = 0),
     regexp = "the 'n' parameter must be numeric and greater than 1"
+  )
+
+  expect_error(
+
+    install_starred_github(github_user = "feddelegrand7",
+                           n = 20,
+                           upgrade = "I don't know"
+                           )
   )
 
 })
 
 
-test_that("test if the function is returning a data frame", {
-
-
-  expect_s3_class(data, class = "data.frame")
-
-
-})
 
 
 
-test_that("test if the function returns a number of rows corresponding to 'n'", {
-
-  expect_equal(nrow(data), 5)
-
-})

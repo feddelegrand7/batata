@@ -66,6 +66,7 @@ install_starred_cran <- function(github_user, n = 5) {
 
 
 install_starred_github <- function(github_user, n = 5, upgrade = "never") {
+
   if (!is.character(github_user)) {
     stop("'github_user' must be provided as a character string")
   }
@@ -77,7 +78,7 @@ install_starred_github <- function(github_user, n = 5, upgrade = "never") {
   if (!(upgrade %in% c("never", "always"))) {
     stop(glue::glue("upgrade takes only the following arguments:
                     - 'never'
-                    - 'always' "))
+                    - 'always'"))
   }
 
   data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/{github_user}/starred?per_page={n}"))
