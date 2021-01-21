@@ -32,6 +32,14 @@ install_starred_cran <- function(github_user, n = 5) {
 
   cran_packages_no_na <- Filter(function(x) {!is.na(x)}, cran_packages)
 
+  combine <- function(..., sep = ", ") {
+    paste(..., collapse = sep)
+  }
+
+  message(glue::glue("the following repositories, if R packages and availables on CRAN, will be installed:
+                     {combine(cran_packages_no_na)}"))
+
+
   purrr::map(cran_packages_no_na,
              purrr::safely(~utils::install.packages(.x)))
 
@@ -57,7 +65,7 @@ install_starred_github <- function(github_user, n = 5, upgrade = "never") {
 
   if (!is.character(github_user)) {
 
-    stop('github user must be provided as a character string')
+    stop("'github_user' must be provided as a character string")
 
   }
 
@@ -69,7 +77,9 @@ install_starred_github <- function(github_user, n = 5, upgrade = "never") {
 
   if (!(upgrade %in% c('never', 'always'))) {
 
-    stop("upgrade takes only the following arguments: 'never' or 'always' ")
+    stop(glue::glue("upgrade takes only the following arguments:
+                    - 'never'
+                    - 'always' "))
 
   }
 
@@ -78,6 +88,13 @@ install_starred_github <- function(github_user, n = 5, upgrade = "never") {
   github_r_repos <- data[data$language == "R", ]$full_name
 
   github_r_repos_no_na <- Filter(function(x) {!is.na(x)}, github_r_repos)
+
+  combine <- function(..., sep = ", ") {
+    paste(..., collapse = sep)
+  }
+
+  message(glue::glue("the following repositories, if R packages, will be installed:
+                     {combine(github_r_repos_no_na)}"))
 
   purrr::map(github_r_repos_no_na,
              purrr::safely(~remotes::install_github(.x, upgrade = upgrade)))
@@ -111,6 +128,14 @@ install_most_starred <- function(n = 10) {
   most_starred <- data$items.name
 
   most_starred_no_na <- Filter(function(x) {!is.na(x)}, most_starred)
+
+
+  combine <- function(..., sep = ", ") {
+    paste(..., collapse = sep)
+  }
+
+  message(glue::glue("the following repositories, if availables on CRAN, will be installed:
+                     {combine(most_starred_no_na)}"))
 
   purrr::map(most_starred_no_na,
              purrr::safely(~utils::install.packages(.x)))
