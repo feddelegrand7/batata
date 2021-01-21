@@ -28,11 +28,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 
-The goal of batata is to help R users manage R packages removals. For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package might come with a bunch of dependencies which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision. 
-
-`batata` takes into account the __modification time__ of the packages instead of the __birth time__. As such, if you decide to update a package to a newer version, `batata` will consider it as a new package (which is technically true as a new package will be installed). 
-
-
+The goal of `batata` is to help R users manage R packages removals and installations. 
 
 ## Installation
 
@@ -42,9 +38,6 @@ You can install the `batata` package from CRAN with:
 install.packages("batata")
 
 ```
-
-
-
 Install the development version of `batata` from Github with: 
 
 ```{r, eval=FALSE}
@@ -54,6 +47,12 @@ remotes::install_github("feddelegrand7/batata")
 
 
 ```
+
+# Packages Removals
+
+For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package might come with a bunch of dependencies which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision. 
+
+`batata` takes into account the __modification time__ of the packages instead of the __birth time__. As such, if you decide to update a package to a newer version, `batata` will consider it as a new package (which is technically true as a new package will be installed). 
 
 
 -------------------------------
@@ -111,8 +110,45 @@ latest_packages(n = 10)
 latest_packages()
 
 
-
 ```
+
+
+# Packages Installations
+
+### `install_starred_cran`
+
+You can install the last R packages that you've starred on Github using the `install_starred_cran`. As an example, the following code chunk will look at the last 10 repositories that I've starred, filter R packages (I starr a lot of JS repos) and install them. 
+
+```{r, eval=FALSE}
+
+install_starred_cran(github_user = 'feddelegrand7', 
+                     n = 10)
+```
+
+Note that if the starred repo is not available on CRAN, `install_starred_cran` will simply ignore it. 
+
+
+### `install_starred_github`
+
+The functions behave the same way as `install_starred_cran` except that it will install the repositories from Github (not from CRAN), so that you can install packages that are not available on CRAN. 
+
+```{r, eval=FALSE}
+
+install_starred_github(github_user = 'feddelegrand7', 
+                       n = 5, 
+                       upgrade = "never")
+```
+
+The above code chunk will look for the last five repos that I've starred, filter out non-R repositories and install R repos. 
+
+
+
+
+## Aknowledgement 
+
+Concerning the __packages installation__ part of `batata` I was mainly inspired by the tweet of [Tim Tiefenbach](https://twitter.com/TimTeaFan/status/1352007510425817089), so a big thanks to him ! 
+
+
 ----------------------------------
 ## Code of Conduct
 

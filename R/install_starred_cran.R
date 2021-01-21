@@ -14,6 +14,18 @@
 
 install_starred_cran <- function(github_user, n = 5) {
 
+  if (!is.character(github_user)) {
+
+    stop('github user must be provided as a character string')
+
+  }
+
+  if(!is.numeric(n)) {
+
+    stop("the 'n' parameter must be numeric")
+
+  }
+
   data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/{github_user}/starred?per_page={n}"))
 
   cran_packages <- data[data$language == "R", ]$name
@@ -52,6 +64,12 @@ install_starred_github <- function(github_user, n = 5, upgrade = "never") {
   if(!is.numeric(n)) {
 
     stop("the 'n' parameter must be numeric")
+
+  }
+
+  if (!(upgrade %in% c('never', 'always'))) {
+
+    stop("upgrade takes only the following arguments: 'never' or 'always' ")
 
   }
 
