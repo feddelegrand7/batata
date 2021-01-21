@@ -115,9 +115,9 @@ latest_packages()
 
 # Packages Installations
 
-### `install_starred_cran`
+### `install_starred_cran()`
 
-You can install the last R packages that you've starred on Github using the `install_starred_cran`. As an example, the following code chunk will look at the last 10 repositories that I've starred, filter R packages (I starr a lot of JS repos) and install them. 
+You can install the latest R packages that you've starred on Github using the `install_starred_cran()` function. As an example, the following code chunk will look at the last 10 repositories that I've starred, filter R packages from non-R repos and install them. 
 
 ```{r, eval=FALSE}
 
@@ -125,12 +125,12 @@ install_starred_cran(github_user = 'feddelegrand7',
                      n = 10)
 ```
 
-Note that if the starred repo is not available on CRAN, `install_starred_cran` will simply ignore it. 
+Note that if the starred repo is not available on CRAN, `install_starred_cran()` will simply ignore it. 
 
 
-### `install_starred_github`
+### `install_starred_github()`
 
-The functions behave the same way as `install_starred_cran` except that it will install the repositories from Github (not from CRAN), so that you can install packages that are not available on CRAN. 
+The functions behaves the same way as `install_starred_cran()` except that it will install the repositories from Github (not from CRAN), so that you can install packages that are not available on CRAN. 
 
 ```{r, eval=FALSE}
 
@@ -139,7 +139,7 @@ install_starred_github(github_user = 'feddelegrand7',
                        upgrade = "never")
 ```
 
-The above code chunk will look for the last five repos that I've starred, filter out non-R repositories and install R repos. 
+The above code chunk will look for the last five repositories that I've starred, filter out non-R repos and install them. 
 
 
 

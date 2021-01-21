@@ -109,9 +109,9 @@ library(batata)
 
 latest_packages(n = 10)
 #>      packages   modification_time
-#> 1      batata 2021-01-21 01:54:40
-#> 2       lintr 2021-01-21 01:42:43
-#> 3        httr 2021-01-21 01:42:40
+#> 1       lintr 2021-01-21 02:16:07
+#> 2        httr 2021-01-21 02:15:42
+#> 3      batata 2021-01-21 02:14:46
 #> 4        brms 2021-01-21 01:20:13
 #> 5  clisymbols 2021-01-21 01:20:13
 #> 6        xfun 2021-01-21 00:53:20
@@ -125,17 +125,17 @@ latest_packages(n = 10)
 
 latest_packages()
 #>   packages   modification_time
-#> 1   batata 2021-01-21 01:54:40
+#> 1    lintr 2021-01-21 02:16:07
 ```
 
 # Packages Installations
 
-### `install_starred_cran`
+### `install_starred_cran()`
 
-You can install the last R packages that you’ve starred on Github using
-the `install_starred_cran`. As an example, the following code chunk will
-look at the last 10 repositories that I’ve starred, filter R packages (I
-starr a lot of JS repos) and install them.
+You can install the latest R packages that you’ve starred on Github
+using the `install_starred_cran()` function. As an example, the
+following code chunk will look at the last 10 repositories that I’ve
+starred, filter R packages from non-R repos and install them.
 
 ``` r
 install_starred_cran(github_user = 'feddelegrand7', 
@@ -143,13 +143,13 @@ install_starred_cran(github_user = 'feddelegrand7',
 ```
 
 Note that if the starred repo is not available on CRAN,
-`install_starred_cran` will simply ignore it.
+`install_starred_cran()` will simply ignore it.
 
-### `install_starred_github`
+### `install_starred_github()`
 
-The functions behave the same way as `install_starred_cran` except that
-it will install the repositories from Github (not from CRAN), so that
-you can install packages that are not available on CRAN.
+The functions behaves the same way as `install_starred_cran()` except
+that it will install the repositories from Github (not from CRAN), so
+that you can install packages that are not available on CRAN.
 
 ``` r
 install_starred_github(github_user = 'feddelegrand7', 
@@ -157,8 +157,8 @@ install_starred_github(github_user = 'feddelegrand7',
                        upgrade = "never")
 ```
 
-The above code chunk will look for the last five repos that I’ve
-starred, filter out non-R repositories and install R repos.
+The above code chunk will look for the last five repositories that I’ve
+starred, filter out non-R repos and install them.
 
 ## Aknowledgement
 
