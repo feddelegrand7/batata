@@ -2,8 +2,6 @@
 
 test_that("expect an error when wrong parameters provided", {
 
-
-
   expect_error(
 
     install_starred_cran(github_user = 123123,
@@ -38,8 +36,6 @@ test_that("test if the function is returning a data frame", {
 
 
 })
-
-
 
 test_that("test if the function returns a number of rows corresponding to 'n'", {
 
