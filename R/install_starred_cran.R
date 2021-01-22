@@ -168,7 +168,7 @@ install_most_starred <- function(n = 10) {
 #' @export
 #'
 #' @examples
-#'
+#' library(curl)
 #' display_starred("hadley", n = 10, onlyR = FALSE)
 #'
 
