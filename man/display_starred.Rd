@@ -22,8 +22,3 @@ A character vector of starred Github repositories
 \description{
 Display User's Github Starred Repositories
 }
-\examples{
-
-display_starred("hadley", n = 10, onlyR = FALSE)
-
-}

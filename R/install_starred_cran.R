@@ -167,9 +167,6 @@ install_most_starred <- function(n = 10) {
 #' @return A character vector of starred Github repositories
 #' @export
 #'
-#' @examples
-#' library(curl)
-#' display_starred("hadley", n = 10, onlyR = FALSE)
 #'
 
 display_starred <- function(github_user, n = 5, onlyR = FALSE) {
@@ -204,4 +201,45 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
   }
 
+}
+
+
+
+#' Display the most starred R Github Repositories
+#'
+#' @param n the number of most starred starred Github R repositories to fetch.
+#' Defaults to 10.
+#' @return a character vector of the most starred R repositories
+#' @export
+#'
+
+
+display_most_starred <- function(n = 10) {
+  if (!is.numeric(n) || n < 1) {
+    stop("the 'n' parameter must be numeric and greater than 1")
+  }
+
+
+  data <- jsonlite::fromJSON(glue::glue("https://api.github.com/search/repositories?q=language:R&sort=stars&order=desc&per_page={n}"))
+
+  data <- as.data.frame(data)
+
+  most_starred <- data$items.name
+
+  most_starred_no_na <- Filter(function(x) {
+    !is.na(x)
+  }, most_starred)
+
+
+  combine <- function(..., sep = ", ") {
+    paste(..., collapse = sep)
+  }
+
+  message(glue::glue("the following repositories, if availables on CRAN, will be installed:
+                     {combine(most_starred_no_na)}"))
+
+  purrr::map(
+    most_starred_no_na,
+    purrr::safely(~ utils::install.packages(.x))
+  )
 }
