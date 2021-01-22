@@ -1,3 +1,6 @@
+library(curl)
+
+
 
 test_that("expect an error when wrong parameters provided", {
 
