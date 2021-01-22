@@ -27,4 +27,12 @@ test_that("expect an error when wrong parameters provided", {
 })
 
 
+test_that("test if the function is returning a data frame", {
+
+  data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/feddelegrand7/starred?per_page=5"))
+
+  expect_s3_class(data, class = "data.frame")
+
+
+})
 

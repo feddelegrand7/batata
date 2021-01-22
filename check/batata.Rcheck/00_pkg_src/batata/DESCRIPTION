@@ -1,0 +1,21 @@
+Package: batata
+Type: Package
+Title: Managing Packages Removal and Installation
+Version: 0.2.0
+Author: Mohamed El Fodil Ihaddaden
+Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
+Description: 
+    Allows the user to manage easily R packages removal and installation. It offers many functions to display installed packages according to
+    specific dates and removes them if needed. The user is always prompted when running the removal functions in order to confirm
+    the required action. It also provides functions that will install 'Github' starred R packages whether available on 'CRAN' or not. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: fs, utils, glue, lubridate, jsonlite, remotes, purrr
+RoxygenNote: 7.1.1
+URL: https://github.com/feddelegrand7/batata
+BugReports: https://github.com/feddelegrand7/batata/issues
+Suggests: knitr, rmarkdown, testthat
+VignetteBuilder: knitr
+NeedsCompilation: no
+Packaged: 2021-01-22 22:56:39 UTC; Administrateur

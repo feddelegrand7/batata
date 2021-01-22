@@ -1,0 +1,10 @@
+* using log directory 'C:/Users/Administrateur/Desktop/ancien1/packages/batata/check/batata.Rcheck'
+* using R version 4.0.2 (2020-06-22)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* using options '--no-manual --as-cran'
+* checking for file 'batata/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'batata' version '0.2.0'
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ...
