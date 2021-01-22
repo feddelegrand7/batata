@@ -1,4 +1,3 @@
-library(curl)
 
 test_that("expect an error when wrong parameters provided", {
 
@@ -37,10 +36,3 @@ test_that("test if the function is returning a data frame", {
 
 })
 
-test_that("test if the function returns a number of rows corresponding to 'n'", {
-
-  data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/feddelegrand7/starred?per_page=5"))
-
-  expect_equal(nrow(data), 5)
-
-})
