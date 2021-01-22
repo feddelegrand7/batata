@@ -7,7 +7,7 @@
 display_most_starred(n = 10)
 }
 \arguments{
-\item{n}{the number of most starred starred Github R repositories to fetch.
+\item{n}{the number of most starred Github R repositories to fetch.
 Defaults to 10.}
 }
 \value{

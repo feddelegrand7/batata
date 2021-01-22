@@ -207,7 +207,7 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
 #' Display the most starred R Github Repositories
 #'
-#' @param n the number of most starred starred Github R repositories to fetch.
+#' @param n the number of most starred Github R repositories to fetch.
 #' Defaults to 10.
 #' @return a character vector of the most starred R repositories
 #' @export
