@@ -215,6 +215,8 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
 
 display_most_starred <- function(n = 10) {
+
+
   if (!is.numeric(n) || n < 1) {
     stop("the 'n' parameter must be numeric and greater than 1")
   }
@@ -226,20 +228,6 @@ display_most_starred <- function(n = 10) {
 
   most_starred <- data$items.name
 
-  most_starred_no_na <- Filter(function(x) {
-    !is.na(x)
-  }, most_starred)
+  return(most_starred)
 
-
-  combine <- function(..., sep = ", ") {
-    paste(..., collapse = sep)
-  }
-
-  message(glue::glue("the following repositories, if availables on CRAN, will be installed:
-                     {combine(most_starred_no_na)}"))
-
-  purrr::map(
-    most_starred_no_na,
-    purrr::safely(~ utils::install.packages(.x))
-  )
 }
