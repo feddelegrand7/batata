@@ -7,7 +7,7 @@
 install_starred_github(github_user, n = 5, upgrade = "never")
 }
 \arguments{
-\item{github_user}{the Github repo user name}
+\item{github_user}{the Github user name to look for}
 
 \item{n}{the last 'n' starred repositories. Defaults to 5, in which case it will look for
 the last 5 starred repositories, filter the R repos and install them}

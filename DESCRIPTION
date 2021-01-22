@@ -18,7 +18,8 @@ Imports:
     lubridate,
     jsonlite,
     remotes,
-    purrr
+    purrr,
+    curl
 RoxygenNote: 7.1.1
 URL: https://github.com/feddelegrand7/batata
 BugReports: https://github.com/feddelegrand7/batata/issues
