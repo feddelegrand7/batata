@@ -5,14 +5,19 @@
 
   
 
--- R CMD check results ---------------------------------- batata 0.1.1 ----
-Duration: 20.3s
+-- R CMD check results -------------------- batata 0.2.0 ----
+Duration: 22s
 
 0 errors √ | 0 warnings √ | 0 notes √
 
-R CMD check succeeded
+
+* I've added three new functions that will install user Github starred R packages 
+whether available on CRAN or not. 
+ `install_starred_cran()` : will install user starred Github packages that are available on CRAN
+ `install_starred_github()`: will install user starred Github packages from Github using remotes
+ `install_most_starred()`: will install the n most starred R packages from CRAN
+
+* I've added unit tests 
 
 
-* the modification time provided by the fs package wasn't exact in some situation. As such, I've change the fs::file_info() to file.mtime() base R function. 
-
-* I've also fixed some bugs concerning the dates using the lubridate package. 
+Thank you very much. 
