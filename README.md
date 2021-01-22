@@ -41,7 +41,7 @@ remotes::install_github("feddelegrand7/batata")
 
 ## Documentation
 
-Documentation available [here](https://batata-doc.netlify.app/)
+The documentation is available [here](https://batata-doc.netlify.app/)
 
 ## Aknowledgement
 
