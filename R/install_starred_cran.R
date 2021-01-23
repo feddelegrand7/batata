@@ -183,11 +183,11 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
   starred_repo <- if (onlyR) {
 
-    data[data$language == "R", ]$name
+    data[data$language == "R", ]$full_name
 
   } else {
 
-    data$name
+    data$full_name
 
   }
 
