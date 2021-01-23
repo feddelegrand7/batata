@@ -226,7 +226,7 @@ display_most_starred <- function(n = 10) {
 
   data <- as.data.frame(data)
 
-  most_starred <- data$items.name
+  most_starred <- data$items.full_name
 
   return(most_starred)
 
