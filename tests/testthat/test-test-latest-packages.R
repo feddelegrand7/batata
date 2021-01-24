@@ -65,4 +65,34 @@ test_that("expect error when n not numeric or not length 1", {
 
 
 
+test_that("expect a data frame from latest_packages()", {
 
+  expect_s3_class(latest_packages(), "data.frame")
+
+})
+
+
+
+test_that("latest_packages() returns at least one row", {
+
+  expect_gt(nrow(latest_packages()), 0)
+
+})
+
+
+test_that("the first column of latest_packages() is of type character", {
+
+  data <- latest_packages()
+
+  expect_type(data$packages, "character")
+
+})
+
+
+test_that("the data returned has exactly two columns", {
+
+
+  expect_equal(ncol(latest_packages()), 2)
+
+
+})

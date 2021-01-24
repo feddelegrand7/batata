@@ -17,3 +17,6 @@ test_that("expect error when n not numeric or not length 1", {
 
 
 
+
+
+
