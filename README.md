@@ -27,9 +27,12 @@ You can install the `batata` package from CRAN with:
 ``` r
 install.packages("batata")
 ```
+You can install the development version from Github with: 
 
-<!-- For example, imagine you're attending tomorrow an R meet up in which you'll experiment many packages that you don't want to keep. By the end of the meet up, you'll have to remember each installed package, its name (trust me, packages' names may be complicated). Further, each installed package might come with a bunch of dependencies which makes the operations more complicated. Using the batata package, you can just run `rm_today_packages()` (one of many other functions), and you're clean for today. Before removing the packages, batata will prompt you to confirm your decision (which adds a certain degree of security), you can also run `today_packages()` to check all the today installed packages before making a decision.  -->
-<!-- `batata` takes into account the __modification time__ of the packages instead of the __birth time__. As such, if you decide to update a package to a newer version, `batata` will consider it as a new package (which is technically true as a new package will be installed).  -->
+``` r
+library(remotes) # if available 
+install_github('feddelegrand7/batata')
+```
 
 ## Documentation
 
