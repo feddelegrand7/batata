@@ -96,3 +96,32 @@ test_that("the data returned has exactly two columns", {
 
 
 })
+
+
+test_that("expect the modification time column to be of POSIXct", {
+
+
+  data <- latest_packages(5)
+
+  expect_equal(class(data$modification_time), c("POSIXct","POSIXt"))
+
+})
+
+
+
+
+
+test_that("latest_packages() has the expected number of rows", {
+
+
+  expect_equal(nrow(latest_packages(1)), 1)
+  expect_equal(nrow(latest_packages(2)), 2)
+  expect_equal(nrow(latest_packages(3)), 3)
+  expect_equal(nrow(latest_packages(4)), 4)
+  expect_equal(nrow(latest_packages(5)), 5)
+
+})
+
+
+
+

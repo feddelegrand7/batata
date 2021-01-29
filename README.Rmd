@@ -25,6 +25,7 @@ knitr::opts_chunk$set(
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![R badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-blue)](https://github.com/feddelegrand7/batata)
 [![R build status](https://github.com/feddelegrand7/batata/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/batata/actions)
+[![Codecov test coverage](https://codecov.io/gh/feddelegrand7/batata/branch/master/graph/badge.svg)](https://codecov.io/gh/feddelegrand7/batata?branch=master)
 <!-- badges: end -->
 
 

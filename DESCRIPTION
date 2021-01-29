@@ -25,5 +25,6 @@ BugReports: https://github.com/feddelegrand7/batata/issues
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    covr
 VignetteBuilder: knitr
