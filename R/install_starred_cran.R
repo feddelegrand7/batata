@@ -170,6 +170,8 @@ install_most_starred <- function(n = 10) {
 #'
 
 display_starred <- function(github_user, n = 5, onlyR = FALSE) {
+
+
   if (!is.character(github_user)) {
     stop("'github_user' must be provided as a character string")
   }
@@ -194,6 +196,8 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
   if(length(starred_repo) == 0) {
 
     message("I can't find any R starred package, go starr some !")
+
+    return(NULL)
 
   } else {
 
