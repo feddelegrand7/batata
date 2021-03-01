@@ -203,7 +203,7 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
         message("I can't find any R starred package, go starr some !")
 
-        return(NULL)
+        return(0)
 
       } else {
 
