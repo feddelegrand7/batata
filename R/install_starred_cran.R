@@ -180,30 +180,54 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
     stop("the 'n' parameter must be numeric and greater than 1")
   }
 
-  data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/{github_user}/starred?per_page={n}"))
+  tryCatch(
 
 
-  starred_repo <- if (onlyR) {
+    expr = {
 
-    data[data$language == "R", ]$full_name
 
-  } else {
+      data <- jsonlite::fromJSON(glue::glue("https://api.github.com/users/{github_user}/starred?per_page={n}"))
 
-    data$full_name
 
-  }
+      starred_repo <- if (onlyR) {
 
-  if(length(starred_repo) == 0) {
+        data[data$language == "R", ]$full_name
 
-    message("I can't find any R starred package, go starr some !")
+      } else {
 
-    return(NULL)
+        data$full_name
 
-  } else {
+      }
 
-   return(starred_repo)
+      if(length(starred_repo) == 0 ) {
 
-  }
+        message("I can't find any R starred package, go starr some !")
+
+        return(NULL)
+
+      } else {
+
+        return(starred_repo)
+
+      }
+
+    },
+
+    error = function(e) {
+
+      if (grepl("HTTP error 404", e, fixed = TRUE)) {
+
+        message(paste0("Error:", e, "maybe you've provided a non existing account???"))
+
+        return(NA)
+
+      }
+
+    }
+
+
+  )
+
 
 }
 
