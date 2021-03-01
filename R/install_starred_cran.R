@@ -203,7 +203,7 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
         message("I can't find any R starred package, go starr some !")
 
-        return(0)
+        return(NA)
 
       } else {
 
@@ -219,7 +219,7 @@ display_starred <- function(github_user, n = 5, onlyR = FALSE) {
 
         message(paste0("Error:", e, "maybe you've provided a non existing account???"))
 
-        return(NA)
+        return(NULL)
 
       }
 
