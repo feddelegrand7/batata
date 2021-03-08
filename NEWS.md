@@ -1,6 +1,10 @@
 # batata 0.2.1
 
+* display_starred now has a more robust interface and displays user/repo instead of only repo for better clarity. 
+
 # batata 0.2.0
+
+* Adding many functions related to packages installation
 
 # batata 0.1.1
 
