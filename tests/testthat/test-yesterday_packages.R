@@ -9,6 +9,8 @@ test_that("yesterday_package() returns an error when argument not character", {
 
 test_that("yesterday_packages() returns the correct output", {
 
+  skip_on_cran()
+
   output <- yesterday_packages()
 
   if (is.null(output)) {
